@@ -52,24 +52,24 @@ export default function Home() {
               <span className="text-sm text-purple-300">Exit Intent Powered by Evolution</span>
             </div>
             
-            <h1 className="text-6xl md:text-7xl lg:text-8xl font-bold mb-6 leading-tight">
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
               <span className="bg-gradient-to-r from-purple-400 via-pink-400 to-purple-400 bg-clip-text text-transparent bg-[length:200%_auto] animate-gradient">
-                Recover Carts
+                Stop Watching Filled Carts
               </span>
               <br />
-              <span className="text-white">Instantly</span>
+              <span className="text-white">Walk Away</span>
             </h1>
-            
-            <p className="text-xl md:text-2xl text-gray-400 mb-12 max-w-3xl mx-auto leading-relaxed">
-              AI-powered exit intent that automatically applies discount codes at checkout. 
-              No email capture. No friction. Just <span className="text-purple-400 font-semibold">revenue</span>.
+
+            <p className="text-xl md:text-2xl text-gray-400 mb-8 max-w-3xl mx-auto leading-relaxed">
+              ResparQ detects when shoppers with items in their cart try to leave, and shows the right message to the right customer at the right time. AI-powered personalization meets full merchant control.
             </p>
-            
-            <div className="flex justify-center">
+
+            <div className="flex flex-col items-center gap-4">
               <button className="group relative px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full text-lg font-semibold hover:shadow-2xl hover:shadow-purple-500/50 transition-all hover:scale-105">
                 <span className="relative z-10">Start Free Trial</span>
                 <div className="absolute inset-0 rounded-full bg-gradient-to-r from-purple-400 to-pink-400 blur opacity-0 group-hover:opacity-50 transition-opacity" />
               </button>
+              <p className="text-sm text-gray-400">Turn cart abandonment into recovered revenue - automatically.</p>
             </div>
           </div>
         </div>
@@ -79,12 +79,12 @@ export default function Home() {
       <section id="features" className="py-20 px-6 relative">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-5xl font-bold mb-4">
+            <h2 className="text-4xl md:text-5xl font-bold mb-4 uppercase tracking-tight">
               <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-                Built Different
+                Built for Performance, Not Pageviews
               </span>
             </h2>
-            <p className="text-xl text-gray-400">Why merchants choose resparq</p>
+            <p className="text-xl text-gray-400">Why merchants choose ResparQ</p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-6">
@@ -92,20 +92,29 @@ export default function Home() {
               {
                 icon: (
                   <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-                  </svg>
-                ),
-                title: 'Automatic Application',
-                description: 'Discount codes apply automatically at checkout. No copy-paste. No friction.'
-              },
-              {
-                icon: (
-                  <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
                   </svg>
                 ),
                 title: 'AI Decision Engine',
-                description: 'Smart discounts based on 8 customer signals. Maximum conversion, minimal margin loss.'
+                description: 'Analyzes 8 customer signals in real-time (cart value, visit history, device, traffic source, and more) to determine the best intervention for each shopper. Sometimes that\'s a discount. Sometimes it\'s not.'
+              },
+              {
+                icon: (
+                  <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4" />
+                  </svg>
+                ),
+                title: 'Full Control',
+                description: 'Override AI decisions anytime. Set offer ranges, create custom messages, choose when modals appear. The AI optimizes within your rules.'
+              },
+              {
+                icon: (
+                  <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                  </svg>
+                ),
+                title: 'Automatic Application',
+                description: 'When customers accept discount offers, codes apply automatically at checkout. No copy-paste friction. No lost conversions.'
               },
               {
                 icon: (
@@ -114,7 +123,7 @@ export default function Home() {
                   </svg>
                 ),
                 title: 'Revenue Tracking',
-                description: 'Track actual revenue recovered, not vanity metrics. See your real ROI.'
+                description: 'Track revenue recovered per impression, not just email signups or clicks. See exactly which interventions drive sales.'
               },
               {
                 icon: (
@@ -133,15 +142,6 @@ export default function Home() {
                 ),
                 title: 'Flat Pricing',
                 description: 'Simple monthly pricing. No hidden fees. No commission on sales.'
-              },
-              {
-                icon: (
-                  <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01" />
-                  </svg>
-                ),
-                title: 'Custom Branding',
-                description: 'Match your brand perfectly. Full design control. Modern templates included.'
               }
             ].map((feature, i) => (
               <div key={i} className="group relative p-8 rounded-2xl bg-slate-900/50 border border-purple-500/20 backdrop-blur-sm hover:border-purple-500/50 transition-all hover:scale-105">
@@ -157,13 +157,66 @@ export default function Home() {
         </div>
       </section>
 
+      {/* How It Works Section */}
+      <section className="py-20 px-6 relative">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold mb-4">
+              <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+                How It Works
+              </span>
+            </h2>
+          </div>
+
+          <div className="max-w-4xl mx-auto space-y-8">
+            {[
+              {
+                number: '1',
+                title: 'Detection',
+                description: 'Customer moves to close tab or navigate away while items are in cart'
+              },
+              {
+                number: '2',
+                title: 'Analysis',
+                description: 'AI evaluates 8 signals: cart value, browsing behavior, visit frequency, device type, traffic source, time on site, pages viewed, past purchases'
+              },
+              {
+                number: '3',
+                title: 'Intervention',
+                description: 'Modal appears with personalized content - could be a discount offer, product benefit reminder, urgency message, or custom content'
+              },
+              {
+                number: '4',
+                title: 'Conversion',
+                description: 'If discount offered, code applies automatically at checkout. Customer completes purchase with one click.'
+              },
+              {
+                number: '5',
+                title: 'Learning',
+                description: 'AI tracks what works and evolves your campaigns automatically (Pro+ plans)'
+              }
+            ].map((step, i) => (
+              <div key={i} className="flex gap-6 items-start">
+                <div className="flex-shrink-0 w-12 h-12 rounded-full bg-gradient-to-r from-purple-600 to-pink-600 flex items-center justify-center text-xl font-bold">
+                  {step.number}
+                </div>
+                <div className="flex-grow">
+                  <h3 className="text-2xl font-bold mb-2 text-white">{step.title}</h3>
+                  <p className="text-gray-400 leading-relaxed">{step.description}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Pricing Section */}
       <section id="pricing" className="py-20 px-6">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-5xl font-bold mb-4">
+            <h2 className="text-4xl md:text-5xl font-bold mb-4 uppercase tracking-tight">
               <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-                Exit intent modals that drive sales, not signups
+                Simple Pricing. Real Results.
               </span>
             </h2>
           </div>
@@ -187,7 +240,7 @@ export default function Home() {
 
               <ul className="space-y-3 flex-grow">
                 {[
-                  { text: 'Manual mode (you set fixed offers)', included: true },
+                  { text: 'Manual mode (you set what appears and when)', included: true },
                   { text: 'Up to 5,000 impressions/month', included: true },
                   { text: '1 campaign', included: true },
                   { text: 'Basic analytics (impressions, clicks, conversions)', included: true },
@@ -236,7 +289,7 @@ export default function Home() {
               <ul className="space-y-3 flex-grow">
                 {[
                   { text: 'Everything in Starter', included: true },
-                  { text: 'AI autopilot mode (8 customer signals)', included: true },
+                  { text: 'AI mode (analyzes 8 customer signals to personalize interventions)', included: true },
                   { text: 'Up to 10,000 impressions/month', included: true },
                   { text: 'Evolution system (auto-improves variants)', included: true },
                   { text: 'Automated A/B testing', included: true },
@@ -245,7 +298,7 @@ export default function Home() {
                   { text: 'Date filtering (7d/30d/all time)', included: true },
                   { text: 'Cart abandonment recovery tracking', included: true },
                   { text: 'Priority email support', included: true },
-                  { text: 'Smarter AI (13 signals)', included: false },
+                  { text: 'Advanced AI (13 signals)', included: false },
                   { text: 'Manual variant control', included: false },
                   { text: 'Unlimited impressions', included: false }
                 ].map((feature, i) => (
@@ -283,7 +336,7 @@ export default function Home() {
                 {[
                   { text: 'Everything in Pro', included: true },
                   { text: 'Unlimited impressions', included: true },
-                  { text: 'Smarter AI (13 customer signals vs 8)', included: true },
+                  { text: 'Advanced AI (13 customer signals for deeper personalization)', included: true },
                   { text: 'Override AI decisions (manual variant control)', included: true },
                   { text: 'Promotional intelligence (auto-detects sales)', included: true },
                   { text: 'Custom CSS styling', included: true },
@@ -311,11 +364,11 @@ export default function Home() {
           <div className="relative p-12 rounded-3xl bg-gradient-to-br from-purple-900/30 to-pink-900/30 border border-purple-500/30 backdrop-blur-sm">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
               <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-                Ready to Recover Revenue?
+                Ready to Stop Losing Sales?
               </span>
             </h2>
             <p className="text-xl text-gray-400 mb-8">
-              Join Shopify merchants recovering abandoned carts automatically
+              Join Shopify merchants turning cart abandonment into recovered revenue.
             </p>
             <button className="px-12 py-5 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full text-xl font-semibold hover:shadow-2xl hover:shadow-purple-500/50 transition-all hover:scale-105">
               Start Free Trial
