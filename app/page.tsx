@@ -25,8 +25,8 @@ export default function Home() {
       <nav className={`fixed top-0 w-full z-50 transition-all duration-300 ${scrollY > 50 ? 'bg-slate-950/80 backdrop-blur-lg border-b border-purple-500/20' : ''}`}>
         <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <div className="w-10 h-10 relative">
-              <Image src="/logo.svg" alt="resparq" fill className="object-contain" />
+            <div className="w-8 h-8 relative">
+              <Image src="/icon-z.svg" alt="resparq" fill className="object-contain" />
             </div>
             <span className="text-2xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">resparq</span>
           </div>
@@ -61,7 +61,7 @@ export default function Home() {
             </h1>
 
             <p className="text-xl md:text-2xl text-gray-400 mb-8 max-w-3xl mx-auto leading-relaxed">
-              ResparQ detects when shoppers with items in their cart try to leave, and shows the right message to the right customer at the right time. AI-powered personalization meets full merchant control.
+              resparq detects when shoppers with items in their cart try to leave, and shows the right message to the right customer at the right time. AI-powered personalization meets full merchant control.
             </p>
 
             <div className="flex flex-col items-center gap-4">
@@ -84,7 +84,7 @@ export default function Home() {
                 Built for Performance, Not Pageviews
               </span>
             </h2>
-            <p className="text-xl text-gray-400">Why merchants choose ResparQ</p>
+            <p className="text-xl text-gray-400">Why merchants choose resparq</p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-6">
@@ -229,7 +229,7 @@ export default function Home() {
               
               <div className="mb-8">
                 <div className="text-5xl font-bold mb-2">
-                  <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">$29</span>
+                  <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">$19</span>
                   <span className="text-xl text-gray-400">/month</span>
                 </div>
               </div>
@@ -241,7 +241,7 @@ export default function Home() {
               <ul className="space-y-3 flex-grow">
                 {[
                   { text: 'Manual mode (you set what appears and when)', included: true },
-                  { text: 'Up to 5,000 impressions/month', included: true },
+                  { text: 'Up to 1,000 impressions/month', included: true },
                   { text: '1 campaign', included: true },
                   { text: 'Basic analytics (impressions, clicks, conversions)', included: true },
                   { text: 'Mobile-optimized modals', included: true },

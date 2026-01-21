@@ -1,6 +1,6 @@
-# ResparQ Website
+# resparq Website
 
-Modern landing page for ResparQ - AI-powered exit intent optimization for Shopify stores.
+Modern landing page for resparq - AI-powered exit intent optimization for Shopify stores.
 
 Built with Next.js, Tailwind CSS, and deployed on Vercel.
 
@@ -21,7 +21,7 @@ resparq-website/
 │   ├── layout.tsx        # Root layout with fonts
 │   └── globals.css       # Global styles + Tailwind + animations
 ├── public/
-│   └── logo.svg          # ResparQ logo
+│   └── logo.svg          # resparq logo
 ├── tailwind.config.js    # Tailwind configuration
 ├── postcss.config.mjs    # PostCSS configuration
 ├── next.config.js        # Next.js configuration
@@ -159,9 +159,9 @@ vercel --prod
 
 ## Pricing Structure
 
-### Starter - $29/month
+### Starter - $19/month
 - Manual mode
-- 5,000 impressions/month
+- 1,000 impressions/month
 - 1 campaign
 - Basic analytics
 - Email support
@@ -217,4 +217,4 @@ vercel --prod
 
 ## License
 
-Copyright © 2025 ResparQ. All rights reserved.
+Copyright © 2025 resparq. All rights reserved.
