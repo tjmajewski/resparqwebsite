@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "ResparQ - AI-Powered Exit Intent for Shopify",
+  title: "resparq - AI-Powered Exit Intent for Shopify",
   description: "Recover abandoned carts automatically with AI-powered exit intent that applies discount codes at checkout.",
 };
 
