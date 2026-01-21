@@ -24,11 +24,10 @@ export default function Home() {
       {/* Navigation */}
       <nav className={`fixed top-0 w-full z-50 transition-all duration-300 ${scrollY > 50 ? 'bg-slate-950/80 backdrop-blur-lg border-b border-purple-500/20' : ''}`}>
         <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-          <div className="flex items-center gap-3">
-            <div className="w-8 h-8 relative">
-              <Image src="/icon-z.svg" alt="resparq" fill className="object-contain" />
+          <div className="flex items-center">
+            <div className="h-8 w-32 relative">
+              <Image src="/logo.svg" alt="resparq" fill className="object-contain object-left" />
             </div>
-            <span className="text-2xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">resparq</span>
           </div>
           <div className="hidden md:flex items-center gap-8">
             <a href="#features" className="text-sm text-gray-300 hover:text-white transition-colors">Features</a>
