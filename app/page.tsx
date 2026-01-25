@@ -229,7 +229,7 @@ export default function Home() {
                 onClick={() => setIsAnnual(!isAnnual)}
                 className={`relative w-14 h-7 rounded-full transition-colors ${isAnnual ? 'bg-gradient-to-r from-purple-600 to-pink-600' : 'bg-slate-700'}`}
               >
-                <span className={`absolute top-1 w-5 h-5 rounded-full bg-white transition-transform ${isAnnual ? 'translate-x-8' : 'translate-x-1'}`} />
+                <span className={`absolute top-1 left-1 w-5 h-5 rounded-full bg-white transition-all duration-200 ${isAnnual ? 'translate-x-6' : 'translate-x-0'}`} />
               </button>
               <span className={`text-sm ${isAnnual ? 'text-white' : 'text-gray-400'}`}>Annual</span>
               <span className="text-xs px-2 py-1 bg-green-500/20 text-green-400 rounded-full">Save 15%</span>
