@@ -388,7 +388,7 @@ export default function Home() {
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-purple-400">*</span>
-                  <span>All plans include 15-day free trial</span>
+                  <span>All plans include 14-day free trial</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-purple-400">*</span>
