@@ -5,6 +5,7 @@ import Image from 'next/image';
 
 export default function Home() {
   const [scrollY, setScrollY] = useState(0);
+  const [isAnnual, setIsAnnual] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => setScrollY(window.scrollY);
@@ -139,8 +140,8 @@ export default function Home() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                   </svg>
                 ),
-                title: 'Flat Pricing',
-                description: 'Simple monthly pricing. No hidden fees. No commission on sales.'
+                title: 'Performance-Based Pricing',
+                description: 'Low base fee plus a small percentage of recovered revenue. We only win when you win.'
               }
             ].map((feature, i) => (
               <div key={i} className="group relative p-8 rounded-2xl bg-slate-900/50 border border-purple-500/20 backdrop-blur-sm hover:border-purple-500/50 transition-all hover:scale-105">
@@ -215,9 +216,24 @@ export default function Home() {
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-4 uppercase tracking-tight">
               <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-                Simple Pricing. Real Results.
+                Performance-Based Pricing
               </span>
             </h2>
+            <p className="text-xl text-gray-400 mb-2">We only make money when you make money.</p>
+            <p className="text-gray-500">Pay a low base fee plus a small percentage of recovered revenue.</p>
+
+            {/* Billing Toggle */}
+            <div className="flex items-center justify-center gap-4 mt-8">
+              <span className={`text-sm ${!isAnnual ? 'text-white' : 'text-gray-400'}`}>Monthly</span>
+              <button
+                onClick={() => setIsAnnual(!isAnnual)}
+                className={`relative w-14 h-7 rounded-full transition-colors ${isAnnual ? 'bg-gradient-to-r from-purple-600 to-pink-600' : 'bg-slate-700'}`}
+              >
+                <span className={`absolute top-1 w-5 h-5 rounded-full bg-white transition-transform ${isAnnual ? 'translate-x-8' : 'translate-x-1'}`} />
+              </button>
+              <span className={`text-sm ${isAnnual ? 'text-white' : 'text-gray-400'}`}>Annual</span>
+              <span className="text-xs px-2 py-1 bg-green-500/20 text-green-400 rounded-full">Save 15%</span>
+            </div>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8 max-w-7xl mx-auto">
@@ -225,12 +241,18 @@ export default function Home() {
             <div className="relative p-8 rounded-3xl bg-slate-900/50 border border-purple-500/20 backdrop-blur-sm flex flex-col">
               <h3 className="text-2xl font-bold mb-2">Starter</h3>
               <p className="text-gray-400 mb-6">Perfect for testing exit intent</p>
-              
-              <div className="mb-8">
-                <div className="text-5xl font-bold mb-2">
-                  <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">$19</span>
-                  <span className="text-xl text-gray-400">/month</span>
+
+              <div className="mb-6">
+                <div className="text-5xl font-bold mb-1">
+                  <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+                    {isAnnual ? '$24.65' : '$29'}
+                  </span>
+                  <span className="text-xl text-gray-400">/mo</span>
                 </div>
+                <div className="text-lg text-purple-400 font-semibold mb-1">+ 5% of recovered revenue</div>
+                {isAnnual && (
+                  <div className="text-sm text-gray-500">$296/year (save 15%)</div>
+                )}
               </div>
 
               <button className="w-full py-3 bg-gradient-to-r from-purple-600 to-pink-600 hover:shadow-xl hover:shadow-purple-500/50 rounded-full text-base font-semibold transition-all mb-8">
@@ -245,21 +267,13 @@ export default function Home() {
                   { text: 'Basic analytics (impressions, clicks, conversions)', included: true },
                   { text: 'Mobile-optimized modals', included: true },
                   { text: 'Auto-apply discount codes', included: true },
-                  { text: 'Email support', included: true },
-                  { text: 'AI autopilot mode', included: false },
-                  { text: 'Automated A/B testing', included: false },
-                  { text: 'Advanced analytics', included: false },
-                  { text: 'Unlimited impressions', included: false }
+                  { text: 'Email support', included: true }
                 ].map((feature, i) => (
                   <li key={i} className="flex items-start gap-3">
-                    <svg className={`w-5 h-5 flex-shrink-0 mt-0.5 ${feature.included ? 'text-green-400' : 'text-red-400'}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      {feature.included ? (
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                      ) : (
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                      )}
+                    <svg className="w-5 h-5 text-green-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
-                    <span className={feature.included ? 'text-gray-300' : 'text-gray-500'}>{feature.text}</span>
+                    <span className="text-gray-300">{feature.text}</span>
                   </li>
                 ))}
               </ul>
@@ -270,15 +284,21 @@ export default function Home() {
               <div className="absolute -top-4 left-1/2 -translate-x-1/2 px-6 py-2 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full text-sm font-semibold">
                 MOST POPULAR
               </div>
-              
+
               <h3 className="text-2xl font-bold mb-2 mt-4">Pro</h3>
               <p className="text-gray-400 mb-6">AI-powered optimization for growing stores</p>
-              
-              <div className="mb-8">
-                <div className="text-5xl font-bold mb-2">
-                  <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">$79</span>
-                  <span className="text-xl text-gray-400">/month</span>
+
+              <div className="mb-6">
+                <div className="text-5xl font-bold mb-1">
+                  <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+                    {isAnnual ? '$67.15' : '$79'}
+                  </span>
+                  <span className="text-xl text-gray-400">/mo</span>
                 </div>
+                <div className="text-lg text-purple-400 font-semibold mb-1">+ 2% of recovered revenue</div>
+                {isAnnual && (
+                  <div className="text-sm text-gray-500">$806/year (save 15%)</div>
+                )}
               </div>
 
               <button className="w-full py-3 bg-gradient-to-r from-purple-600 to-pink-600 hover:shadow-xl hover:shadow-purple-500/50 rounded-full text-base font-semibold transition-all mb-8">
@@ -296,20 +316,13 @@ export default function Home() {
                   { text: 'Advanced analytics (revenue tracking, variant performance)', included: true },
                   { text: 'Date filtering (7d/30d/all time)', included: true },
                   { text: 'Cart abandonment recovery tracking', included: true },
-                  { text: 'Priority email support', included: true },
-                  { text: 'Advanced AI (13 signals)', included: false },
-                  { text: 'Manual variant control', included: false },
-                  { text: 'Unlimited impressions', included: false }
+                  { text: 'Priority email support', included: true }
                 ].map((feature, i) => (
                   <li key={i} className="flex items-start gap-3">
-                    <svg className={`w-5 h-5 flex-shrink-0 mt-0.5 ${feature.included ? 'text-green-400' : 'text-red-400'}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      {feature.included ? (
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                      ) : (
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                      )}
+                    <svg className="w-5 h-5 text-green-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
-                    <span className={feature.included ? 'text-gray-300' : 'text-gray-500'}>{feature.text}</span>
+                    <span className="text-gray-300">{feature.text}</span>
                   </li>
                 ))}
               </ul>
@@ -319,12 +332,18 @@ export default function Home() {
             <div className="relative p-8 rounded-3xl bg-slate-900/50 border border-purple-500/20 backdrop-blur-sm flex flex-col">
               <h3 className="text-2xl font-bold mb-2">Enterprise</h3>
               <p className="text-gray-400 mb-6">Maximum control for high-volume stores</p>
-              
-              <div className="mb-8">
-                <div className="text-5xl font-bold mb-2">
-                  <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">$249</span>
-                  <span className="text-xl text-gray-400">/month</span>
+
+              <div className="mb-6">
+                <div className="text-5xl font-bold mb-1">
+                  <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+                    {isAnnual ? '$169.15' : '$199'}
+                  </span>
+                  <span className="text-xl text-gray-400">/mo</span>
                 </div>
+                <div className="text-lg text-purple-400 font-semibold mb-1">+ 1% of recovered revenue</div>
+                {isAnnual && (
+                  <div className="text-sm text-gray-500">$2,030/year (save 15%)</div>
+                )}
               </div>
 
               <button className="w-full py-3 bg-gradient-to-r from-purple-600 to-pink-600 hover:shadow-xl hover:shadow-purple-500/50 rounded-full text-base font-semibold transition-all mb-8">
@@ -354,6 +373,34 @@ export default function Home() {
               </ul>
             </div>
           </div>
+
+          {/* Pricing Notes */}
+          <div className="mt-12 max-w-3xl mx-auto">
+            <div className="p-6 rounded-2xl bg-slate-900/30 border border-purple-500/10">
+              <ul className="space-y-2 text-sm text-gray-400">
+                <li className="flex items-start gap-2">
+                  <span className="text-purple-400">*</span>
+                  <span>Performance fees (5%/2%/1%) apply only to revenue recovered through ResparQ</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-purple-400">*</span>
+                  <span>15% annual discount applies to base monthly fees only</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-purple-400">*</span>
+                  <span>All plans include 14-day free trial</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-purple-400">*</span>
+                  <span>No setup fees or hidden charges</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-purple-400">*</span>
+                  <span>Cancel anytime</span>
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -372,6 +419,12 @@ export default function Home() {
             <button className="px-12 py-5 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full text-xl font-semibold hover:shadow-2xl hover:shadow-purple-500/50 transition-all hover:scale-105">
               Start Free Trial
             </button>
+            <p className="text-gray-500 mt-6">
+              Questions? Reach out at{' '}
+              <a href="mailto:sales@resparq.ai" className="text-purple-400 hover:text-purple-300 transition-colors">
+                sales@resparq.ai
+              </a>
+            </p>
           </div>
         </div>
       </section>
@@ -379,7 +432,12 @@ export default function Home() {
       {/* Footer */}
       <footer className="py-12 px-6 border-t border-purple-500/20">
         <div className="max-w-7xl mx-auto text-center text-gray-400">
-          <p>&copy; 2025 resparq. Built for merchants who want sales, not subscribers.</p>
+          <p className="mb-2">&copy; 2025 resparq. Built for merchants who want sales, not subscribers.</p>
+          <p>
+            <a href="mailto:sales@resparq.ai" className="text-purple-400 hover:text-purple-300 transition-colors">
+              sales@resparq.ai
+            </a>
+          </p>
         </div>
       </footer>
     </div>
