@@ -375,31 +375,12 @@ export default function Home() {
           </div>
 
           {/* Pricing Notes */}
-          <div className="mt-12 max-w-3xl mx-auto">
-            <div className="p-6 rounded-2xl bg-slate-900/30 border border-purple-500/10">
-              <ul className="space-y-2 text-sm text-gray-400">
-                <li className="flex items-start gap-2">
-                  <span className="text-purple-400">*</span>
-                  <span>Performance fees (5%/2%/1%) apply only to revenue recovered through ResparQ</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-purple-400">*</span>
-                  <span>15% annual discount applies to base monthly fees only</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-purple-400">*</span>
-                  <span>All plans include 14-day free trial</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-purple-400">*</span>
-                  <span>No setup fees or hidden charges</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-purple-400">*</span>
-                  <span>Cancel anytime</span>
-                </li>
-              </ul>
-            </div>
+          <div className="mt-16 text-center">
+            <p className="text-sm text-gray-500 max-w-2xl mx-auto leading-relaxed">
+              Performance fees apply only to revenue recovered through resparq.
+              15% annual discount applies to base fees only.
+              All plans include a 14-day free trial. No setup fees. Cancel anytime.
+            </p>
           </div>
         </div>
       </section>
