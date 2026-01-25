@@ -178,7 +178,7 @@ export default function Home() {
               {
                 number: '2',
                 title: 'Analysis',
-                description: 'AI evaluates 8 signals: cart value, browsing behavior, visit frequency, device type, traffic source, time on site, pages viewed, past purchases'
+                description: 'AI evaluates multiple customer signals to determine the best intervention'
               },
               {
                 number: '3',
@@ -308,7 +308,7 @@ export default function Home() {
               <ul className="space-y-3 flex-grow">
                 {[
                   { text: 'Everything in Starter', included: true },
-                  { text: 'AI mode (analyzes 8 customer signals to personalize interventions)', included: true },
+                  { text: 'AI mode', included: true },
                   { text: 'Up to 10,000 impressions/month', included: true },
                   { text: 'Evolution system (auto-improves variants)', included: true },
                   { text: 'Automated A/B testing', included: true },
@@ -354,7 +354,7 @@ export default function Home() {
                 {[
                   { text: 'Everything in Pro', included: true },
                   { text: 'Unlimited impressions', included: true },
-                  { text: 'Advanced AI (13 customer signals for deeper personalization)', included: true },
+                  { text: 'Advanced AI (deeper personalization)', included: true },
                   { text: 'Override AI decisions (manual variant control)', included: true },
                   { text: 'Promotional intelligence (auto-detects sales)', included: true },
                   { text: 'Custom CSS styling', included: true },
