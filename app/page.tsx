@@ -6,6 +6,50 @@ import Image from 'next/image';
 export default function Home() {
   const [scrollY, setScrollY] = useState(0);
   const [isAnnual, setIsAnnual] = useState(false);
+  const [openFaq, setOpenFaq] = useState<number | null>(null);
+
+  const faqItems = [
+    {
+      question: "How does resparq's AI decide what to show each customer?",
+      answer: "Our AI analyzes 8 customer signals in real-time including cart value, visit history, device type, traffic source, time on site, and browsing behavior. Based on this analysis, it determines the optimal intervention for each shopper—whether that's a discount offer, product benefit reminder, urgency message, or simply letting them go. The goal is to show the right message to the right customer, not just blast everyone with discounts."
+    },
+    {
+      question: "Will exit intent pop-ups annoy my customers?",
+      answer: "resparq is designed to be helpful, not annoying. Our modals only appear when a customer with items in their cart attempts to leave—not on every page visit. The AI also learns over time which interventions work best, reducing unnecessary disruptions. Plus, you have full control over frequency limits and can customize when modals appear."
+    },
+    {
+      question: "How do discount codes apply automatically at checkout?",
+      answer: "When a customer accepts a discount offer through resparq, the code is automatically applied to their cart—no copy-paste required. This removes friction from the checkout process and significantly increases conversion rates compared to traditional pop-ups that require customers to remember and manually enter codes."
+    },
+    {
+      question: "What counts as 'recovered revenue' for pricing?",
+      answer: "Recovered revenue is tracked when a customer who saw a resparq intervention completes their purchase. We use attribution tracking to ensure we only count revenue that's directly connected to resparq's intervention. You only pay the performance fee on sales that resparq helped recover—not your regular sales."
+    },
+    {
+      question: "Does resparq work on mobile devices?",
+      answer: "Yes! All resparq modals are fully mobile-optimized and responsive. On mobile, we detect exit intent through different signals like scroll behavior and back button attempts, ensuring you can recover carts from mobile shoppers too."
+    },
+    {
+      question: "How long does it take to set up resparq?",
+      answer: "Most merchants complete setup in under 5 minutes. Simply install the app from the Shopify App Store, and resparq automatically integrates with your store. No coding required, and it works with any Shopify theme. You can start recovering carts immediately with our default settings, then customize as needed."
+    },
+    {
+      question: "Can I customize how the modals look?",
+      answer: "Absolutely. You can customize modal content, messaging, and timing on all plans. Enterprise plans include custom CSS styling and white-label options to remove resparq branding entirely, allowing the modals to match your store's look and feel perfectly."
+    },
+    {
+      question: "Will resparq slow down my store?",
+      answer: "No. resparq is built for performance with lightweight, asynchronous loading that doesn't impact your store's page speed or Core Web Vitals. The script only activates when exit intent is detected, so there's no overhead during normal browsing."
+    },
+    {
+      question: "What happens after the 14-day free trial?",
+      answer: "After your trial, you'll be charged the base fee for your selected plan plus any performance fees on recovered revenue. There are no setup fees, and you can cancel anytime. If you decide resparq isn't right for you during the trial, simply uninstall—no charges will be made."
+    },
+    {
+      question: "How is resparq different from email capture pop-ups?",
+      answer: "Traditional exit intent tools focus on capturing emails for future marketing. resparq focuses on immediate conversion—recovering the sale right now, in the moment. No email forms, no friction, just revenue. Our auto-apply discount feature and AI-powered personalization are designed to close the sale, not build an email list."
+    }
+  ];
 
   useEffect(() => {
     const handleScroll = () => setScrollY(window.scrollY);
@@ -13,8 +57,27 @@ export default function Home() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": faqItems.map(faq => ({
+      "@type": "Question",
+      "name": faq.question,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": faq.answer
+      }
+    }))
+  };
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-purple-950 to-slate-900 text-white overflow-hidden">
+      {/* FAQ Schema for SEO */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+
       {/* Animated background gradient orbs */}
       <div className="fixed inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-0 -left-4 w-96 h-96 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob" />
@@ -33,6 +96,7 @@ export default function Home() {
           <div className="hidden md:flex items-center gap-8">
             <a href="#features" className="text-sm text-gray-300 hover:text-white transition-colors">Features</a>
             <a href="#pricing" className="text-sm text-gray-300 hover:text-white transition-colors">Pricing</a>
+            <a href="#faq" className="text-sm text-gray-300 hover:text-white transition-colors">FAQ</a>
             <button className="px-6 py-2 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full text-sm font-medium hover:shadow-lg hover:shadow-purple-500/50 transition-all">
               Start Free Trial
             </button>
@@ -381,6 +445,49 @@ export default function Home() {
               15% annual discount applies to base fees only.
               All plans include a 14-day free trial. No setup fees. Cancel anytime.
             </p>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <section id="faq" className="py-20 px-6 relative">
+        <div className="max-w-4xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold mb-4">
+              <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+                Frequently Asked Questions
+              </span>
+            </h2>
+            <p className="text-xl text-gray-400">Everything you need to know about resparq</p>
+          </div>
+
+          <div className="space-y-4">
+            {faqItems.map((faq, index) => (
+              <div
+                key={index}
+                className="rounded-2xl bg-slate-900/50 border border-purple-500/20 backdrop-blur-sm overflow-hidden transition-all hover:border-purple-500/40"
+              >
+                <button
+                  onClick={() => setOpenFaq(openFaq === index ? null : index)}
+                  className="w-full px-6 py-5 flex items-center justify-between text-left"
+                >
+                  <span className="text-lg font-medium text-white pr-4">{faq.question}</span>
+                  <svg
+                    className={`w-6 h-6 text-purple-400 flex-shrink-0 transition-transform duration-300 ${openFaq === index ? 'rotate-180' : ''}`}
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                  </svg>
+                </button>
+                <div
+                  className={`overflow-hidden transition-all duration-300 ${openFaq === index ? 'max-h-96 pb-6' : 'max-h-0'}`}
+                >
+                  <p className="px-6 text-gray-400 leading-relaxed">{faq.answer}</p>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
