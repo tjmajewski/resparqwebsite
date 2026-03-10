@@ -22,10 +22,6 @@ export default function Home() {
       answer: "When a customer accepts a discount offer through resparq, the code is automatically applied to their cart—no copy-paste required. This removes friction from the checkout process and significantly increases conversion rates compared to traditional pop-ups that require customers to remember and manually enter codes."
     },
     {
-      question: "What counts as 'recovered revenue' for pricing?",
-      answer: "Recovered revenue is tracked when a customer who saw a resparq intervention completes their purchase. We use attribution tracking to ensure we only count revenue that's directly connected to resparq's intervention. You only pay the performance fee on sales that resparq helped recover—not your regular sales."
-    },
-    {
       question: "Does resparq work on mobile devices?",
       answer: "Yes! All resparq modals are fully mobile-optimized and responsive. On mobile, we detect exit intent through different signals like scroll behavior and back button attempts, ensuring you can recover carts from mobile shoppers too."
     },
@@ -204,8 +200,8 @@ export default function Home() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                   </svg>
                 ),
-                title: 'Performance-Based Pricing',
-                description: 'Low base fee plus a small percentage of recovered revenue. We only win when you win.'
+                title: 'Simple, Flat-Rate Pricing',
+                description: 'Clear, predictable plans with no commissions or hidden fees. Pick the plan that fits your store and start recovering revenue.'
               }
             ].map((feature, i) => (
               <div key={i} className="group relative p-8 rounded-2xl bg-slate-900/50 border border-purple-500/20 backdrop-blur-sm hover:border-purple-500/50 transition-all hover:scale-105">
@@ -280,11 +276,10 @@ export default function Home() {
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-4 uppercase tracking-tight">
               <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-                Performance-Based Pricing
+                Simple Pricing for Recovered Revenue
               </span>
             </h2>
-            <p className="text-xl text-gray-400 mb-2">We only make money when you make money.</p>
-            <p className="text-gray-500">Pay a low base fee plus a small percentage of recovered revenue.</p>
+            <p className="text-xl text-gray-400 mb-2">Simple, flat-rate plans. No hidden fees.</p>
 
             {/* Billing Toggle */}
             <div className="flex items-center justify-center gap-4 mt-8">
@@ -313,7 +308,6 @@ export default function Home() {
                   </span>
                   <span className="text-xl text-gray-400">/mo</span>
                 </div>
-                <div className="text-lg text-purple-400 font-semibold mb-1">+ 5% of recovered revenue</div>
                 {isAnnual && (
                   <div className="text-sm text-gray-500">$296/year (save 15%)</div>
                 )}
@@ -359,7 +353,6 @@ export default function Home() {
                   </span>
                   <span className="text-xl text-gray-400">/mo</span>
                 </div>
-                <div className="text-lg text-purple-400 font-semibold mb-1">+ 2% of recovered revenue</div>
                 {isAnnual && (
                   <div className="text-sm text-gray-500">$806/year (save 15%)</div>
                 )}
@@ -404,7 +397,6 @@ export default function Home() {
                   </span>
                   <span className="text-xl text-gray-400">/mo</span>
                 </div>
-                <div className="text-lg text-purple-400 font-semibold mb-1">+ 1% of recovered revenue</div>
                 {isAnnual && (
                   <div className="text-sm text-gray-500">$2,030/year (save 15%)</div>
                 )}
@@ -441,7 +433,6 @@ export default function Home() {
           {/* Pricing Notes */}
           <div className="mt-16 text-center">
             <p className="text-sm text-gray-500 max-w-2xl mx-auto leading-relaxed">
-              Performance fees apply only to revenue recovered through resparq.
               15% annual discount applies to base fees only.
               All plans include a 14-day free trial. No setup fees. Cancel anytime.
             </p>
