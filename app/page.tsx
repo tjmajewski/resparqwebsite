@@ -39,7 +39,7 @@ export default function Home() {
     },
     {
       question: "What happens after the 14-day free trial?",
-      answer: "After your trial, you'll be charged the base fee for your selected plan plus any performance fees on recovered revenue. There are no setup fees, and you can cancel anytime. If you decide resparq isn't right for you during the trial, simply uninstall—no charges will be made."
+      answer: "After your trial, you'll be charged the flat monthly or annual fee for your selected plan. There are no setup fees, no commissions, and you can cancel anytime. If you decide resparq isn't right for you during the trial, simply uninstall—no charges will be made."
     },
     {
       question: "How is resparq different from email capture pop-ups?",
@@ -433,7 +433,7 @@ export default function Home() {
           {/* Pricing Notes */}
           <div className="mt-16 text-center">
             <p className="text-sm text-gray-500 max-w-2xl mx-auto leading-relaxed">
-              15% annual discount applies to base fees only.
+              15% annual discount applied to all plans.
               All plans include a 14-day free trial. No setup fees. Cancel anytime.
             </p>
           </div>
