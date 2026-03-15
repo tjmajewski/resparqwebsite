@@ -10,40 +10,40 @@ export default function Home() {
 
   const faqItems = [
     {
-      question: "How does resparq's AI decide what to show each customer?",
-      answer: "Our AI analyzes 8 customer signals in real-time including cart value, visit history, device type, traffic source, time on site, and browsing behavior. Based on this analysis, it determines the optimal intervention for each shopper—whether that's a discount offer, product benefit reminder, urgency message, or simply letting them go. The goal is to show the right message to the right customer, not just blast everyone with discounts."
+      question: "How does Resparq's AI decide what to show each customer?",
+      answer: "Our AI analyzes 8 customer signals in real-time including cart value, visit history, device type, traffic source, time on site, and browsing behavior. Based on this analysis, it determines the optimal intervention for each shopper, whether that's a discount offer, product benefit reminder, urgency message, or simply letting them go. The goal is to show the right message to the right customer, not just blast everyone with discounts."
     },
     {
       question: "Will exit intent pop-ups annoy my customers?",
-      answer: "resparq is designed to be helpful, not annoying. Our modals only appear when a customer with items in their cart attempts to leave—not on every page visit. The AI also learns over time which interventions work best, reducing unnecessary disruptions. Plus, you have full control over frequency limits and can customize when modals appear."
+      answer: "Resparq is designed to be helpful, not annoying. Our modals only appear when a customer with items in their cart attempts to leave, not on every page visit. The AI also learns over time which interventions work best, reducing unnecessary disruptions. Plus, you have full control over frequency limits and can customize when modals appear."
     },
     {
       question: "How do discount codes apply automatically at checkout?",
-      answer: "When a customer accepts a discount offer through resparq, the code is automatically applied to their cart—no copy-paste required. This removes friction from the checkout process and significantly increases conversion rates compared to traditional pop-ups that require customers to remember and manually enter codes."
+      answer: "When a customer accepts a discount offer through Resparq, the code is automatically applied to their cart, no copy-paste required. This removes friction from the checkout process and significantly increases conversion rates compared to traditional pop-ups that require customers to remember and manually enter codes."
     },
     {
-      question: "Does resparq work on mobile devices?",
-      answer: "Yes! All resparq modals are fully mobile-optimized and responsive. On mobile, we detect exit intent through different signals like scroll behavior and back button attempts, ensuring you can recover carts from mobile shoppers too."
+      question: "Does Resparq work on mobile devices?",
+      answer: "Yes! All Resparq modals are fully mobile-optimized and responsive. On mobile, we detect exit intent through different signals like scroll behavior and back button attempts, ensuring you can recover carts from mobile shoppers too."
     },
     {
-      question: "How long does it take to set up resparq?",
-      answer: "Most merchants complete setup in under 5 minutes. Simply install the app from the Shopify App Store, and resparq automatically integrates with your store. No coding required, and it works with any Shopify theme. You can start recovering carts immediately with our default settings, then customize as needed."
+      question: "How long does it take to set up Resparq?",
+      answer: "Most merchants complete setup in under 5 minutes. Simply install the app from the Shopify App Store, and Resparq automatically integrates with your store. No coding required, and it works with any Shopify theme. You can start recovering carts immediately with our default settings, then customize as needed."
     },
     {
       question: "Can I customize how the modals look?",
-      answer: "Absolutely. You can customize modal content, messaging, and timing on all plans. Enterprise plans include custom CSS styling and white-label options to remove resparq branding entirely, allowing the modals to match your store's look and feel perfectly."
+      answer: "Absolutely. You can customize modal content, messaging, and timing on all plans. Enterprise plans include custom CSS styling and white-label options to remove Resparq branding entirely, allowing the modals to match your store's look and feel perfectly."
     },
     {
-      question: "Will resparq slow down my store?",
-      answer: "No. resparq is built for performance with lightweight, asynchronous loading that doesn't impact your store's page speed or Core Web Vitals. The script only activates when exit intent is detected, so there's no overhead during normal browsing."
+      question: "Will Resparq slow down my store?",
+      answer: "No. Resparq is built for performance with lightweight, asynchronous loading that doesn't impact your store's page speed or Core Web Vitals. The script only activates when exit intent is detected, so there's no overhead during normal browsing."
     },
     {
       question: "What happens after the 14-day free trial?",
-      answer: "After your trial, you'll be charged the flat monthly or annual fee for your selected plan. There are no setup fees, no commissions, and you can cancel anytime. If you decide resparq isn't right for you during the trial, simply uninstall—no charges will be made."
+      answer: "After your trial, you'll be charged the flat monthly or annual fee for your selected plan. There are no setup fees, no commissions, and you can cancel anytime. If you decide Resparq isn't right for you during the trial, simply uninstall and no charges will be made."
     },
     {
-      question: "How is resparq different from email capture pop-ups?",
-      answer: "Traditional exit intent tools focus on capturing emails for future marketing. resparq focuses on immediate conversion—recovering the sale right now, in the moment. No email forms, no friction, just revenue. Our auto-apply discount feature and AI-powered personalization are designed to close the sale, not build an email list."
+      question: "How is Resparq different from email capture pop-ups?",
+      answer: "Traditional exit intent tools focus on capturing emails for future marketing. Resparq focuses on immediate conversion, recovering the sale right now, in the moment. No email forms, no friction, just revenue. Our auto-apply discount feature and AI-powered personalization are designed to close the sale, not build an email list."
     }
   ];
 
@@ -86,13 +86,14 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
           <div className="flex items-center">
             <div className="h-8 w-32 relative">
-              <Image src="/logo.svg" alt="resparq" fill className="object-contain object-left" />
+              <Image src="/logo.svg" alt="Resparq" fill className="object-contain object-left" />
             </div>
           </div>
           <div className="hidden md:flex items-center gap-8">
             <a href="#features" className="text-sm text-gray-300 hover:text-white transition-colors">Features</a>
             <a href="#pricing" className="text-sm text-gray-300 hover:text-white transition-colors">Pricing</a>
             <a href="#faq" className="text-sm text-gray-300 hover:text-white transition-colors">FAQ</a>
+            <a href="/blog" className="text-sm text-gray-300 hover:text-white transition-colors">Blog</a>
             <button className="px-6 py-2 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full text-sm font-medium hover:shadow-lg hover:shadow-purple-500/50 transition-all">
               Start Free Trial
             </button>
@@ -111,7 +112,7 @@ export default function Home() {
               </span>
               <span className="text-sm text-purple-300">Exit Intent Powered by Evolution</span>
             </div>
-            
+
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
               <span className="bg-gradient-to-r from-purple-400 via-pink-400 to-purple-400 bg-clip-text text-transparent bg-[length:200%_auto] animate-gradient">
                 Stop Watching Filled Carts
@@ -121,7 +122,7 @@ export default function Home() {
             </h1>
 
             <p className="text-xl md:text-2xl text-gray-400 mb-8 max-w-3xl mx-auto leading-relaxed">
-              resparq detects when shoppers with items in their cart try to leave, and shows the right message to the right customer at the right time. AI-powered personalization meets full merchant control.
+              Resparq detects when shoppers with items in their cart try to leave, and shows the right message to the right customer at the right time. AI-powered personalization meets full merchant control.
             </p>
 
             <div className="flex flex-col items-center gap-4">
@@ -144,7 +145,7 @@ export default function Home() {
                 Built for Performance, Not Pageviews
               </span>
             </h2>
-            <p className="text-xl text-gray-400">Why merchants choose resparq</p>
+            <p className="text-xl text-gray-400">Why merchants choose Resparq</p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-6">
@@ -449,7 +450,7 @@ export default function Home() {
                 Frequently Asked Questions
               </span>
             </h2>
-            <p className="text-xl text-gray-400">Everything you need to know about resparq</p>
+            <p className="text-xl text-gray-400">Everything you need to know about Resparq</p>
           </div>
 
           <div className="space-y-4">
@@ -511,7 +512,12 @@ export default function Home() {
       {/* Footer */}
       <footer className="py-12 px-6 border-t border-purple-500/20">
         <div className="max-w-7xl mx-auto text-center text-gray-400">
-          <p className="mb-2">&copy; 2025 resparq. Built for merchants who want sales, not subscribers.</p>
+          <div className="flex justify-center gap-6 mb-4">
+            <a href="/blog" className="text-sm hover:text-white transition-colors">Blog</a>
+            <a href="#features" className="text-sm hover:text-white transition-colors">Features</a>
+            <a href="#pricing" className="text-sm hover:text-white transition-colors">Pricing</a>
+          </div>
+          <p className="mb-2">&copy; 2025 Resparq. Built for merchants who want sales, not subscribers.</p>
           <p>
             <a href="mailto:sales@resparq.ai" className="text-purple-400 hover:text-purple-300 transition-colors">
               sales@resparq.ai

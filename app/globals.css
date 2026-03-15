@@ -29,3 +29,16 @@
 .animate-gradient {
   animation: gradient 3s ease infinite;
 }
+
+/* Blog content typography */
+.blog-content a {
+  @apply text-purple-400 hover:text-purple-300 underline underline-offset-4 transition-colors;
+}
+
+.blog-content strong {
+  @apply text-white font-semibold;
+}
+
+.blog-content em {
+  @apply text-purple-300;
+}
