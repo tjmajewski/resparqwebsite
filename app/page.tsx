@@ -93,6 +93,7 @@ export default function Home() {
             <a href="#features" className="text-sm text-gray-300 hover:text-white transition-colors">Features</a>
             <a href="#pricing" className="text-sm text-gray-300 hover:text-white transition-colors">Pricing</a>
             <a href="#faq" className="text-sm text-gray-300 hover:text-white transition-colors">FAQ</a>
+            <a href="/blog" className="text-sm text-gray-300 hover:text-white transition-colors">Blog</a>
             <button className="px-6 py-2 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full text-sm font-medium hover:shadow-lg hover:shadow-purple-500/50 transition-all">
               Start Free Trial
             </button>
@@ -111,7 +112,7 @@ export default function Home() {
               </span>
               <span className="text-sm text-purple-300">Exit Intent Powered by Evolution</span>
             </div>
-            
+
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
               <span className="bg-gradient-to-r from-purple-400 via-pink-400 to-purple-400 bg-clip-text text-transparent bg-[length:200%_auto] animate-gradient">
                 Stop Watching Filled Carts
@@ -511,6 +512,11 @@ export default function Home() {
       {/* Footer */}
       <footer className="py-12 px-6 border-t border-purple-500/20">
         <div className="max-w-7xl mx-auto text-center text-gray-400">
+          <div className="flex justify-center gap-6 mb-4">
+            <a href="/blog" className="text-sm hover:text-white transition-colors">Blog</a>
+            <a href="#features" className="text-sm hover:text-white transition-colors">Features</a>
+            <a href="#pricing" className="text-sm hover:text-white transition-colors">Pricing</a>
+          </div>
           <p className="mb-2">&copy; 2025 resparq. Built for merchants who want sales, not subscribers.</p>
           <p>
             <a href="mailto:sales@resparq.ai" className="text-purple-400 hover:text-purple-300 transition-colors">
