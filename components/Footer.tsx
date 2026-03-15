@@ -9,7 +9,7 @@ export default function Footer() {
           <a href="/#features" className="text-sm hover:text-white transition-colors">Features</a>
           <a href="/#pricing" className="text-sm hover:text-white transition-colors">Pricing</a>
         </div>
-        <p>&copy; 2026 resparq. Built for merchants who want sales, not subscribers.</p>
+        <p>&copy; 2026 Resparq. Built for merchants who want sales, not subscribers.</p>
       </div>
     </footer>
   );

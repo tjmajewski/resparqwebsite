@@ -56,12 +56,12 @@ export default async function BlogPostPage({ params }: Props) {
     description: post.metaDescription,
     author: {
       '@type': 'Organization',
-      name: 'resparq',
+      name: 'Resparq',
       url: 'https://www.resparq.ai',
     },
     publisher: {
       '@type': 'Organization',
-      name: 'resparq',
+      name: 'Resparq',
       url: 'https://www.resparq.ai',
     },
     mainEntityOfPage: {
@@ -127,8 +127,8 @@ export default async function BlogPostPage({ params }: Props) {
               Ready to Recover Lost Revenue?
             </h2>
             <p className="text-gray-400 mb-6 max-w-xl mx-auto">
-              resparq&apos;s AI-powered exit intent automatically applies discount
-              codes at checkout — no email capture, no friction.
+              Resparq&apos;s AI-powered exit intent automatically applies discount
+              codes at checkout, no email capture, no friction.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link

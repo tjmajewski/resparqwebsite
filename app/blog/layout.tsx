@@ -4,11 +4,11 @@ import Footer from '@/components/Footer';
 
 export const metadata: Metadata = {
   title: {
-    template: '%s | resparq Blog',
-    default: 'Blog - Exit Intent & Cart Recovery Insights | resparq',
+    template: '%s | Resparq Blog',
+    default: 'Blog - Exit Intent & Cart Recovery Insights | Resparq',
   },
   description:
-    'Expert insights on exit intent popups, cart abandonment recovery, and Shopify conversion optimization from resparq.',
+    'Expert insights on exit intent popups, cart abandonment recovery, and Shopify conversion optimization from Resparq.',
 };
 
 export default function BlogLayout({

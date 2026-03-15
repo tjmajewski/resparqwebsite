@@ -14,15 +14,15 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: {
-    template: "%s | resparq",
-    default: "resparq - AI-Powered Exit Intent for Shopify",
+    template: "%s | Resparq",
+    default: "Resparq - AI-Powered Exit Intent for Shopify",
   },
   description:
     "Recover abandoned carts automatically with AI-powered exit intent that applies discount codes at checkout.",
   metadataBase: new URL("https://www.resparq.ai"),
   openGraph: {
     type: "website",
-    siteName: "resparq",
+    siteName: "Resparq",
     url: "https://www.resparq.ai",
   },
 };

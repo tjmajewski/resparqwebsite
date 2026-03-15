@@ -21,9 +21,9 @@ export default function Navigation({ variant = 'landing' }: { variant?: 'landing
       <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
         <Link href="/" className="flex items-center gap-3">
           <div className="w-10 h-10 relative">
-            <Image src="/logo.svg" alt="resparq" fill className="object-contain" />
+            <Image src="/logo.svg" alt="Resparq" fill className="object-contain" />
           </div>
-          <span className="text-2xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">resparq</span>
+          <span className="text-2xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">Resparq</span>
         </Link>
         <div className="hidden md:flex items-center gap-8">
           <a href={featuresHref} className="text-sm text-gray-300 hover:text-white transition-colors">Features</a>
