@@ -15,7 +15,7 @@ export default function Home() {
     },
     {
       question: "Will exit intent pop-ups annoy my customers?",
-      answer: "Resparq is designed to be helpful, not annoying. Our modals only appear when a customer with items in their cart attempts to leave, not on every page visit. The AI also learns over time which interventions work best, reducing unnecessary disruptions. Plus, you have full control over frequency limits and can customize when modals appear."
+      answer: "Resparq is designed to be helpful, not annoying. Modals only appear when the AI detects a shopper is likely to abandon, not on every page visit. The AI also learns over time which interventions work best, reducing unnecessary disruptions. Plus, you have full control over frequency limits and can customize when modals appear."
     },
     {
       question: "How do discount codes apply automatically at checkout?",
@@ -110,19 +110,19 @@ export default function Home() {
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-purple-400 opacity-75"></span>
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-purple-500"></span>
               </span>
-              <span className="text-sm text-purple-300">Exit Intent Powered by Evolution</span>
+              <span className="text-sm text-purple-300">Now Live on the Shopify App Store</span>
             </div>
 
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
               <span className="bg-gradient-to-r from-purple-400 via-pink-400 to-purple-400 bg-clip-text text-transparent bg-[length:200%_auto] animate-gradient">
-                Stop Watching Filled Carts
+                Recover Abandoned Carts
               </span>
               <br />
-              <span className="text-white">Walk Away</span>
+              <span className="text-white">Before They're Gone</span>
             </h1>
 
             <p className="text-xl md:text-2xl text-gray-400 mb-8 max-w-3xl mx-auto leading-relaxed">
-              Resparq detects when shoppers with items in their cart try to leave, and shows the right message to the right customer at the right time. AI-powered personalization meets full merchant control.
+              When a shopper is about to leave your Shopify store, Resparq steps in with a personalized offer to bring them back. AI picks the right message, discount codes auto-apply at checkout, and you recover revenue now, not email addresses later.
             </p>
 
             <div className="flex flex-col items-center gap-4">
@@ -130,7 +130,7 @@ export default function Home() {
                 <span className="relative z-10">Start Free Trial</span>
                 <div className="absolute inset-0 rounded-full bg-gradient-to-r from-purple-400 to-pink-400 blur opacity-0 group-hover:opacity-50 transition-opacity" />
               </a>
-              <p className="text-sm text-gray-400">Turn cart abandonment into recovered revenue - automatically.</p>
+              <p className="text-sm text-gray-400">14-day free trial. 5-minute setup. No coding required.</p>
             </div>
           </div>
         </div>
@@ -300,7 +300,7 @@ export default function Home() {
             {/* Starter Plan */}
             <div className="relative p-8 rounded-3xl bg-slate-900/50 border border-purple-500/20 backdrop-blur-sm flex flex-col">
               <h3 className="text-2xl font-bold mb-2">Starter</h3>
-              <p className="text-gray-400 mb-6">Perfect for testing exit intent</p>
+              <p className="text-gray-400 mb-6">For stores up to ~200 orders/month</p>
 
               <div className="mb-6">
                 <div className="text-5xl font-bold mb-1">
@@ -345,7 +345,7 @@ export default function Home() {
               </div>
 
               <h3 className="text-2xl font-bold mb-2 mt-4">Pro</h3>
-              <p className="text-gray-400 mb-6">AI-powered optimization for growing stores</p>
+              <p className="text-gray-400 mb-6">For stores with 200-2,000 orders/month</p>
 
               <div className="mb-6">
                 <div className="text-5xl font-bold mb-1">
@@ -389,7 +389,7 @@ export default function Home() {
             {/* Enterprise Plan */}
             <div className="relative p-8 rounded-3xl bg-slate-900/50 border border-purple-500/20 backdrop-blur-sm flex flex-col">
               <h3 className="text-2xl font-bold mb-2">Enterprise</h3>
-              <p className="text-gray-400 mb-6">Maximum control for high-volume stores</p>
+              <p className="text-gray-400 mb-6">For stores with 2,000+ orders/month</p>
 
               <div className="mb-6">
                 <div className="text-5xl font-bold mb-1">
@@ -436,6 +436,9 @@ export default function Home() {
             <p className="text-sm text-gray-500 max-w-2xl mx-auto leading-relaxed">
               15% annual discount applied to all plans.
               All plans include a 14-day free trial. No setup fees. Cancel anytime.
+            </p>
+            <p className="text-sm text-gray-500 max-w-2xl mx-auto leading-relaxed mt-2">
+              Not sure which plan fits? An impression is counted each time the AI shows a modal to a shopper it thinks is about to abandon. Most stores see 5-10 impressions per 100 visitors.
             </p>
           </div>
         </div>
@@ -517,7 +520,7 @@ export default function Home() {
             <a href="#features" className="text-sm hover:text-white transition-colors">Features</a>
             <a href="#pricing" className="text-sm hover:text-white transition-colors">Pricing</a>
           </div>
-          <p className="mb-2">&copy; 2025 Resparq. Built for merchants who want sales, not subscribers.</p>
+          <p className="mb-2">&copy; 2026 Resparq. Built for merchants who want sales, not subscribers.</p>
           <p>
             <a href="mailto:sales@resparq.ai" className="text-purple-400 hover:text-purple-300 transition-colors">
               sales@resparq.ai
