@@ -234,7 +234,7 @@ export default function Home() {
               {
                 number: '1',
                 title: 'Detection',
-                description: 'Customer moves to close tab or navigate away while items are in cart'
+                description: 'AI identifies signs that a shopper with items in their cart is about to abandon'
               },
               {
                 number: '2',
