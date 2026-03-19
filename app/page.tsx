@@ -94,9 +94,9 @@ export default function Home() {
             <a href="#pricing" className="text-sm text-gray-300 hover:text-white transition-colors">Pricing</a>
             <a href="#faq" className="text-sm text-gray-300 hover:text-white transition-colors">FAQ</a>
             <a href="/blog" className="text-sm text-gray-300 hover:text-white transition-colors">Blog</a>
-            <button className="px-6 py-2 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full text-sm font-medium hover:shadow-lg hover:shadow-purple-500/50 transition-all">
+            <a href="https://apps.shopify.com/resparq" target="_blank" rel="noopener noreferrer" className="px-6 py-2 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full text-sm font-medium hover:shadow-lg hover:shadow-purple-500/50 transition-all">
               Start Free Trial
-            </button>
+            </a>
           </div>
         </div>
       </nav>
@@ -126,10 +126,10 @@ export default function Home() {
             </p>
 
             <div className="flex flex-col items-center gap-4">
-              <button className="group relative px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full text-lg font-semibold hover:shadow-2xl hover:shadow-purple-500/50 transition-all hover:scale-105">
+              <a href="https://apps.shopify.com/resparq" target="_blank" rel="noopener noreferrer" className="group relative px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full text-lg font-semibold hover:shadow-2xl hover:shadow-purple-500/50 transition-all hover:scale-105">
                 <span className="relative z-10">Start Free Trial</span>
                 <div className="absolute inset-0 rounded-full bg-gradient-to-r from-purple-400 to-pink-400 blur opacity-0 group-hover:opacity-50 transition-opacity" />
-              </button>
+              </a>
               <p className="text-sm text-gray-400">Turn cart abandonment into recovered revenue - automatically.</p>
             </div>
           </div>
@@ -314,9 +314,9 @@ export default function Home() {
                 )}
               </div>
 
-              <button className="w-full py-3 bg-gradient-to-r from-purple-600 to-pink-600 hover:shadow-xl hover:shadow-purple-500/50 rounded-full text-base font-semibold transition-all mb-8">
+              <a href="https://apps.shopify.com/resparq" target="_blank" rel="noopener noreferrer" className="block w-full py-3 bg-gradient-to-r from-purple-600 to-pink-600 hover:shadow-xl hover:shadow-purple-500/50 rounded-full text-base font-semibold transition-all mb-8 text-center">
                 Start Free Trial
-              </button>
+              </a>
 
               <ul className="space-y-3 flex-grow">
                 {[
@@ -359,9 +359,9 @@ export default function Home() {
                 )}
               </div>
 
-              <button className="w-full py-3 bg-gradient-to-r from-purple-600 to-pink-600 hover:shadow-xl hover:shadow-purple-500/50 rounded-full text-base font-semibold transition-all mb-8">
+              <a href="https://apps.shopify.com/resparq" target="_blank" rel="noopener noreferrer" className="block w-full py-3 bg-gradient-to-r from-purple-600 to-pink-600 hover:shadow-xl hover:shadow-purple-500/50 rounded-full text-base font-semibold transition-all mb-8 text-center">
                 Start Free Trial
-              </button>
+              </a>
 
               <ul className="space-y-3 flex-grow">
                 {[
@@ -403,9 +403,9 @@ export default function Home() {
                 )}
               </div>
 
-              <button className="w-full py-3 bg-gradient-to-r from-purple-600 to-pink-600 hover:shadow-xl hover:shadow-purple-500/50 rounded-full text-base font-semibold transition-all mb-8">
+              <a href="https://apps.shopify.com/resparq" target="_blank" rel="noopener noreferrer" className="block w-full py-3 bg-gradient-to-r from-purple-600 to-pink-600 hover:shadow-xl hover:shadow-purple-500/50 rounded-full text-base font-semibold transition-all mb-8 text-center">
                 Start Free Trial
-              </button>
+              </a>
 
               <ul className="space-y-3 flex-grow">
                 {[
@@ -496,9 +496,9 @@ export default function Home() {
             <p className="text-xl text-gray-400 mb-8">
               Join Shopify merchants turning cart abandonment into recovered revenue.
             </p>
-            <button className="px-12 py-5 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full text-xl font-semibold hover:shadow-2xl hover:shadow-purple-500/50 transition-all hover:scale-105">
+            <a href="https://apps.shopify.com/resparq" target="_blank" rel="noopener noreferrer" className="px-12 py-5 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full text-xl font-semibold hover:shadow-2xl hover:shadow-purple-500/50 transition-all hover:scale-105">
               Start Free Trial
-            </button>
+            </a>
             <p className="text-gray-500 mt-6">
               Questions? Reach out at{' '}
               <a href="mailto:sales@resparq.ai" className="text-purple-400 hover:text-purple-300 transition-colors">
