@@ -29,9 +29,9 @@ export default function Navigation({ variant = 'landing' }: { variant?: 'landing
           <a href={featuresHref} className="text-sm text-gray-300 hover:text-white transition-colors">Features</a>
           <a href={pricingHref} className="text-sm text-gray-300 hover:text-white transition-colors">Pricing</a>
           <Link href="/blog" className="text-sm text-gray-300 hover:text-white transition-colors">Blog</Link>
-          <button className="px-6 py-2 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full text-sm font-medium hover:shadow-lg hover:shadow-purple-500/50 transition-all">
+          <a href="https://apps.shopify.com/resparq" target="_blank" rel="noopener noreferrer" className="px-6 py-2 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full text-sm font-medium hover:shadow-lg hover:shadow-purple-500/50 transition-all">
             Start Free Trial
-          </button>
+          </a>
         </div>
       </div>
     </nav>
