@@ -162,7 +162,7 @@ const posts: BlogPost[] = [
       { type: 'heading2', text: '7. AI-Powered Dynamic Offers', id: 'ai-offers' },
       { type: 'paragraph', text: 'The most advanced approach to Shopify cart recovery uses <strong>AI to determine the optimal intervention</strong> for each specific visitor. Rather than offering every abandoning shopper the same 10% discount, AI-powered tools analyze customer signals to personalize the offer.' },
       { type: 'paragraph', text: 'A price-sensitive first-time visitor browsing sale items might receive a percentage discount. A returning customer with high purchase intent might just need a free shipping offer or a simple reminder of what\'s in their cart. By matching the offer to the visitor\'s behavior and intent, AI-powered tools maximize conversion while minimizing unnecessary discounting.' },
-      { type: 'paragraph', text: 'This is the approach Resparq takes: our AI Decision Engine analyzes up to 13 customer signals to determine the right offer for each visitor, then applies it automatically at checkout. <a href="/#pricing">See our plans</a>.' },
+      { type: 'paragraph', text: 'This is the approach Resparq takes: our AI Decision Engine analyzes up to 17 customer signals to determine the right offer for each visitor, then applies it automatically at checkout. <a href="/#pricing">See our plans</a>.' },
     ],
   },
   {
@@ -498,7 +498,7 @@ const posts: BlogPost[] = [
       ] },
       { type: 'heading2', text: 'Key Features to Evaluate', id: 'key-features' },
       { type: 'heading3', text: 'Behavioral Signal Analysis', id: 'signal-analysis' },
-      { type: 'paragraph', text: 'Ask how many signals the tool analyzes to predict abandonment. Basic tools track 1-2 signals (mouse position, time on page). Advanced AI systems analyze 8-13+ signals including scroll patterns, cart value, browsing history, referral source, device type, and session behavior. More signals generally mean more accurate predictions and better personalization.' },
+      { type: 'paragraph', text: 'Ask how many signals the tool analyzes to predict abandonment. Basic tools track 1-2 signals (mouse position, time on page). Advanced AI systems analyze 17+ signals including scroll patterns, cart value, browsing history, referral source, device type, and session behavior. More signals generally mean more accurate predictions and better personalization.' },
       { type: 'heading3', text: 'Automatic Discount Application', id: 'auto-discount' },
       { type: 'paragraph', text: 'This is a make-or-break feature. If the visitor accepts a discount offer, does the code apply automatically at checkout? Or do they need to copy a code, navigate to checkout, and paste it in? The difference in conversion rates between auto-apply and manual-apply is substantial.' },
       { type: 'heading3', text: 'Offer Personalization', id: 'offer-personalization' },
@@ -532,7 +532,7 @@ const posts: BlogPost[] = [
         '<strong>Freemium:</strong> Free tier with limited features or impressions. Good for testing, but the limitations often make it hard to evaluate true performance.'
       ] },
       { type: 'paragraph', text: 'When comparing costs, always calculate the <strong>net ROI</strong>: revenue recovered minus tool cost minus discount cost. A more expensive tool with better AI might generate higher net returns than a cheaper tool with basic features.' },
-      { type: 'callout', text: 'Resparq offers flat-rate pricing starting at $29/month with no commissions on recovered sales. Our AI Decision Engine analyzes up to 13 customer signals to maximize your recovery rate while minimizing discounts. <a href="/#pricing">Compare our plans</a>.' },
+      { type: 'callout', text: 'Resparq offers flat-rate pricing starting at $29/month with no commissions on recovered sales. Our AI Decision Engine analyzes up to 17 customer signals to maximize your recovery rate while minimizing discounts. <a href="/#pricing">Compare our plans</a>.' },
     ],
   },
 ];
