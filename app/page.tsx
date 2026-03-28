@@ -11,7 +11,7 @@ export default function Home() {
   const faqItems = [
     {
       question: "How does Resparq's AI decide what to show each customer?",
-      answer: "Our AI analyzes 8 customer signals in real-time including cart value, visit history, device type, traffic source, time on site, and browsing behavior. Based on this analysis, it determines the optimal intervention for each shopper, whether that's a discount offer, product benefit reminder, urgency message, or simply letting them go. The goal is to show the right message to the right customer, not just blast everyone with discounts."
+      answer: "Our AI analyzes 17 customer signals in real-time including cart value, visit history, device type, traffic source, time on site, and browsing behavior. Based on this analysis, it determines the optimal intervention for each shopper, whether that's a discount offer, product benefit reminder, urgency message, or simply letting them go. The goal is to show the right message to the right customer, not just blast everyone with discounts."
     },
     {
       question: "Will exit intent pop-ups annoy my customers?",
@@ -157,7 +157,7 @@ export default function Home() {
                   </svg>
                 ),
                 title: 'AI Decision Engine',
-                description: 'Analyzes 8 customer signals in real-time (cart value, visit history, device, traffic source, and more) to determine the best intervention for each shopper. Sometimes that\'s a discount. Sometimes it\'s not.'
+                description: 'Analyzes 17 customer signals in real-time (cart value, visit history, device, traffic source, and more) to determine the best intervention for each shopper. Sometimes that\'s a discount. Sometimes it\'s not.'
               },
               {
                 icon: (

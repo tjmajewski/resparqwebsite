@@ -168,7 +168,7 @@ vercel --prod
 
 ### Pro - $79/month ⭐ MOST POPULAR
 - Everything in Starter
-- AI autopilot (8 signals)
+- AI autopilot (17 signals)
 - 10,000 impressions/month
 - Evolution system
 - A/B testing
@@ -177,7 +177,7 @@ vercel --prod
 ### Enterprise - $249/month
 - Everything in Pro
 - Unlimited impressions
-- Smarter AI (13 signals)
+- Smarter AI (17 signals)
 - Manual variant control
 - Custom CSS
 - White-label
