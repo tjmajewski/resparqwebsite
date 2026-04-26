@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react';
 import Image from 'next/image';
 
 export default function Home() {
-  const [scrollY, setScrollY] = useState(0);
+  const [scrolled, setScrolled] = useState(false);
   const [isAnnual, setIsAnnual] = useState(false);
   const [openFaq, setOpenFaq] = useState<number | null>(null);
 
@@ -48,8 +48,8 @@ export default function Home() {
   ];
 
   useEffect(() => {
-    const handleScroll = () => setScrollY(window.scrollY);
-    window.addEventListener('scroll', handleScroll);
+    const handleScroll = () => setScrolled(window.scrollY > 50);
+    window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
@@ -75,14 +75,14 @@ export default function Home() {
       />
 
       {/* Animated background gradient orbs */}
-      <div className="fixed inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-0 -left-4 w-96 h-96 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob" />
-        <div className="absolute top-0 -right-4 w-96 h-96 bg-indigo-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob animation-delay-2000" />
-        <div className="absolute -bottom-8 left-20 w-96 h-96 bg-pink-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob animation-delay-4000" />
+      <div className="fixed inset-0 overflow-hidden pointer-events-none" aria-hidden>
+        <div className="absolute top-0 -left-4 w-96 h-96 bg-purple-500 rounded-full filter blur-3xl opacity-20 animate-blob will-change-transform" />
+        <div className="absolute top-0 -right-4 w-96 h-96 bg-indigo-500 rounded-full filter blur-3xl opacity-20 animate-blob animation-delay-2000 will-change-transform" />
+        <div className="absolute -bottom-8 left-20 w-96 h-96 bg-pink-500 rounded-full filter blur-3xl opacity-20 animate-blob animation-delay-4000 will-change-transform" />
       </div>
 
       {/* Navigation */}
-      <nav className={`fixed top-0 w-full z-50 transition-all duration-300 ${scrollY > 50 ? 'bg-slate-950/80 backdrop-blur-lg border-b border-purple-500/20' : ''}`}>
+      <nav className={`fixed top-0 w-full z-50 transition-all duration-300 ${scrolled ? 'bg-slate-950/80 backdrop-blur-lg border-b border-purple-500/20' : ''}`}>
         <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
           <div className="flex items-center">
             <div className="h-8 w-32 relative">
@@ -205,7 +205,7 @@ export default function Home() {
                 description: 'Clear, predictable plans with no commissions or hidden fees. Pick the plan that fits your store and start recovering revenue.'
               }
             ].map((feature, i) => (
-              <div key={i} className="group relative p-8 rounded-2xl bg-slate-900/50 border border-purple-500/20 backdrop-blur-sm hover:border-purple-500/50 transition-all hover:scale-105">
+              <div key={i} className="group relative p-8 rounded-2xl bg-slate-900/50 border border-purple-500/20 hover:border-purple-500/50 transition-all hover:scale-105">
                 <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-purple-500/10 to-pink-500/10 opacity-0 group-hover:opacity-100 transition-opacity" />
                 <div className="relative">
                   <div className="text-purple-400 mb-4">{feature.icon}</div>
@@ -298,7 +298,7 @@ export default function Home() {
 
           <div className="grid md:grid-cols-3 gap-8 max-w-7xl mx-auto">
             {/* Starter Plan */}
-            <div className="relative p-8 rounded-3xl bg-slate-900/50 border border-purple-500/20 backdrop-blur-sm flex flex-col">
+            <div className="relative p-8 rounded-3xl bg-slate-900/50 border border-purple-500/20 flex flex-col">
               <h3 className="text-2xl font-bold mb-2">Starter</h3>
               <p className="text-gray-400 mb-6">For stores up to ~200 orders/month</p>
 
@@ -339,7 +339,7 @@ export default function Home() {
             </div>
 
             {/* Pro Plan */}
-            <div className="relative p-8 rounded-3xl bg-gradient-to-br from-purple-900/30 to-pink-900/30 border-2 border-purple-500/50 backdrop-blur-sm flex flex-col">
+            <div className="relative p-8 rounded-3xl bg-gradient-to-br from-purple-900/30 to-pink-900/30 border-2 border-purple-500/50 flex flex-col">
               <div className="absolute -top-4 left-1/2 -translate-x-1/2 px-6 py-2 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full text-sm font-semibold">
                 MOST POPULAR
               </div>
@@ -387,7 +387,7 @@ export default function Home() {
             </div>
 
             {/* Enterprise Plan */}
-            <div className="relative p-8 rounded-3xl bg-slate-900/50 border border-purple-500/20 backdrop-blur-sm flex flex-col">
+            <div className="relative p-8 rounded-3xl bg-slate-900/50 border border-purple-500/20 flex flex-col">
               <h3 className="text-2xl font-bold mb-2">Enterprise</h3>
               <p className="text-gray-400 mb-6">For stores with 2,000+ orders/month</p>
 
@@ -490,7 +490,7 @@ export default function Home() {
       {/* CTA Section */}
       <section className="py-20 px-6">
         <div className="max-w-4xl mx-auto text-center">
-          <div className="relative p-12 rounded-3xl bg-gradient-to-br from-purple-900/30 to-pink-900/30 border border-purple-500/30 backdrop-blur-sm">
+          <div className="relative p-12 rounded-3xl bg-gradient-to-br from-purple-900/30 to-pink-900/30 border border-purple-500/30">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
               <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
                 Ready to Stop Losing Sales?
