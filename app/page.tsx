@@ -10,6 +10,10 @@ export default function Home() {
 
   const faqItems = [
     {
+      question: "How is Resparq different from email capture pop-ups?",
+      answer: "Traditional exit intent tools focus on capturing emails for future marketing. Resparq focuses on immediate conversion, recovering the sale right now, in the moment. No email forms, no friction, just revenue. Our auto-apply discount feature and AI-powered personalization are designed to close the sale, not build an email list."
+    },
+    {
       question: "How does Resparq's AI decide what to show each customer?",
       answer: "Our AI analyzes 17 customer signals in real-time including cart value, visit history, device type, traffic source, time on site, and browsing behavior. Based on this analysis, it determines the optimal intervention for each shopper, whether that's a discount offer, product benefit reminder, urgency message, or simply letting them go. The goal is to show the right message to the right customer, not just blast everyone with discounts."
     },
@@ -40,10 +44,6 @@ export default function Home() {
     {
       question: "What happens after the 14-day free trial?",
       answer: "After your trial, you'll be charged the flat monthly or annual fee for your selected plan. There are no setup fees, no commissions, and you can cancel anytime. If you decide Resparq isn't right for you during the trial, simply uninstall and no charges will be made."
-    },
-    {
-      question: "How is Resparq different from email capture pop-ups?",
-      answer: "Traditional exit intent tools focus on capturing emails for future marketing. Resparq focuses on immediate conversion, recovering the sale right now, in the moment. No email forms, no friction, just revenue. Our auto-apply discount feature and AI-powered personalization are designed to close the sale, not build an email list."
     }
   ];
 
@@ -74,15 +74,8 @@ export default function Home() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
 
-      {/* Animated background gradient orbs */}
-      <div className="fixed inset-0 overflow-hidden pointer-events-none" aria-hidden>
-        <div className="absolute top-0 -left-4 w-96 h-96 bg-purple-500 rounded-full filter blur-3xl opacity-20 animate-blob will-change-transform" />
-        <div className="absolute top-0 -right-4 w-96 h-96 bg-indigo-500 rounded-full filter blur-3xl opacity-20 animate-blob animation-delay-2000 will-change-transform" />
-        <div className="absolute -bottom-8 left-20 w-96 h-96 bg-pink-500 rounded-full filter blur-3xl opacity-20 animate-blob animation-delay-4000 will-change-transform" />
-      </div>
-
       {/* Navigation */}
-      <nav className={`fixed top-0 w-full z-50 transition-all duration-300 ${scrolled ? 'bg-slate-950/80 backdrop-blur-lg border-b border-purple-500/20' : ''}`}>
+      <nav className={`fixed top-0 w-full z-50 transition-all duration-300 ${scrolled ? 'bg-slate-950/95 border-b border-purple-500/20' : ''}`}>
         <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
           <div className="flex items-center">
             <div className="h-8 w-32 relative">
@@ -105,7 +98,7 @@ export default function Home() {
       <section className="relative pt-32 pb-20 px-6">
         <div className="max-w-7xl mx-auto">
           <div className="text-center max-w-4xl mx-auto">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-purple-500/10 border border-purple-500/20 backdrop-blur-sm mb-8">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-purple-500/10 border border-purple-500/20 mb-8">
               <span className="relative flex h-2 w-2">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-purple-400 opacity-75"></span>
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-purple-500"></span>
@@ -114,7 +107,7 @@ export default function Home() {
             </div>
 
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
-              <span className="bg-gradient-to-r from-purple-400 via-pink-400 to-purple-400 bg-clip-text text-transparent bg-[length:200%_auto] animate-gradient">
+              <span className="bg-gradient-to-r from-purple-400 via-pink-400 to-purple-400 bg-clip-text text-transparent">
                 Recover Abandoned Carts
               </span>
               <br />
@@ -460,7 +453,7 @@ export default function Home() {
             {faqItems.map((faq, index) => (
               <div
                 key={index}
-                className="rounded-2xl bg-slate-900/50 border border-purple-500/20 backdrop-blur-sm overflow-hidden transition-all hover:border-purple-500/40"
+                className="rounded-2xl bg-slate-900/80 border border-purple-500/20 overflow-hidden transition-all hover:border-purple-500/40"
               >
                 <button
                   onClick={() => setOpenFaq(openFaq === index ? null : index)}
