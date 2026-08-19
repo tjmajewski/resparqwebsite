@@ -23,3 +23,23 @@
 .blog-content em {
   @apply text-purple-300;
 }
+
+/* Legal page typography */
+.legal-content h2 {
+  @apply text-2xl font-bold text-white mt-10 mb-4;
+}
+.legal-content h3 {
+  @apply text-lg font-semibold text-white mt-6 mb-2;
+}
+.legal-content p {
+  @apply text-gray-300 leading-relaxed mb-4;
+}
+.legal-content ul {
+  @apply list-disc pl-6 space-y-2 mb-4 text-gray-300 leading-relaxed marker:text-purple-400;
+}
+.legal-content a {
+  @apply text-purple-400 hover:text-purple-300 underline underline-offset-4 transition-colors;
+}
+.legal-content strong {
+  @apply text-white font-semibold;
+}
