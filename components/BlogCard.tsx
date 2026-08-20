@@ -10,27 +10,25 @@ export default function BlogCard({ post }: { post: BlogPost }) {
 
   return (
     <Link href={`/blog/${post.slug}`} className="group">
-      <article className="h-full p-6 rounded-2xl bg-slate-900/50 border border-purple-500/20 backdrop-blur-sm hover:border-purple-500/50 transition-all hover:scale-[1.02] flex flex-col">
-        <div className="flex items-center gap-3 mb-4">
-          <span className="px-3 py-1 text-xs font-medium rounded-full bg-purple-500/10 border border-purple-500/20 text-purple-300">
+      <article className="flex h-full flex-col rounded-2xl border border-white/10 bg-white/[0.02] p-6 transition-colors hover:border-white/20 hover:bg-white/[0.04]">
+        <div className="mb-4 flex items-center gap-3">
+          <span className="rounded-full border border-brand-500/25 bg-brand-500/10 px-2.5 py-1 text-xs font-medium text-brand-300">
             {post.category}
           </span>
-          <span className="text-xs text-gray-500">{post.readTime}</span>
+          <span className="text-xs text-zinc-500">{post.readTime}</span>
         </div>
-        <h3 className="text-lg font-semibold text-white group-hover:text-purple-400 transition-colors mb-3 leading-snug">
+        <h3 className="mb-3 text-lg font-semibold leading-snug text-white transition-colors group-hover:text-brand-300">
           {post.title}
         </h3>
-        <p className="text-sm text-gray-400 leading-relaxed mb-4 flex-grow">
-          {post.excerpt}
-        </p>
-        <div className="flex items-center justify-between">
-          <time dateTime={post.date} className="text-xs text-gray-500">
+        <p className="mb-5 flex-grow text-sm leading-relaxed text-zinc-400">{post.excerpt}</p>
+        <div className="flex items-center justify-between border-t border-white/5 pt-4">
+          <time dateTime={post.date} className="text-xs text-zinc-500">
             {formattedDate}
           </time>
-          <span className="text-sm text-purple-400 group-hover:text-purple-300 transition-colors flex items-center gap-1">
-            Read more
-            <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+          <span className="flex items-center gap-1 text-sm text-brand-400 transition-colors group-hover:text-brand-300">
+            Read
+            <svg className="h-4 w-4 transition-transform group-hover:translate-x-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.8} d="M9 5l7 7-7 7" />
             </svg>
           </span>
         </div>

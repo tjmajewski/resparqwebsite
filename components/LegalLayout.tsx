@@ -12,23 +12,16 @@ export default function LegalLayout({
   children: ReactNode;
 }) {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-950 via-purple-950 to-slate-900 text-white overflow-hidden">
-      <div className="fixed inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-0 -left-4 w-96 h-96 bg-purple-500 rounded-full filter blur-3xl opacity-20" />
-        <div className="absolute top-0 -right-4 w-96 h-96 bg-indigo-500 rounded-full filter blur-3xl opacity-20" />
-      </div>
+    <div className="min-h-screen bg-ink-950 text-zinc-300">
+      <div className="pointer-events-none fixed inset-x-0 top-0 h-[400px] bg-brand-600/10 blur-[120px]" />
 
       <Navigation variant="blog" />
 
-      <main className="relative pt-32 pb-20 px-6">
-        <article className="max-w-3xl mx-auto legal-content">
+      <main className="relative px-6 pb-24 pt-36">
+        <article className="mx-auto max-w-3xl legal-content">
           <header className="mb-12">
-            <h1 className="text-4xl md:text-5xl font-bold mb-3">
-              <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-                {title}
-              </span>
-            </h1>
-            <p className="text-gray-400">Last updated: {updated}</p>
+            <h1 className="text-4xl font-semibold tracking-tight text-white md:text-5xl">{title}</h1>
+            <p className="mt-3 text-zinc-500">Last updated: {updated}</p>
           </header>
           {children}
         </article>

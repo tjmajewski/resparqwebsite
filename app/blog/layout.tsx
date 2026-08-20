@@ -17,17 +17,12 @@ export default function BlogLayout({
   children: React.ReactNode;
 }) {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-950 via-purple-950 to-slate-900 text-white overflow-hidden">
-      {/* Animated background gradient orbs */}
-      <div className="fixed inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-0 -left-4 w-96 h-96 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob" />
-        <div className="absolute top-0 -right-4 w-96 h-96 bg-indigo-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob animation-delay-2000" />
-        <div className="absolute -bottom-8 left-20 w-96 h-96 bg-pink-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob animation-delay-4000" />
-      </div>
+    <div className="min-h-screen bg-ink-950 text-zinc-300">
+      <div className="pointer-events-none fixed inset-x-0 top-0 h-[400px] bg-brand-600/10 blur-[120px]" />
 
       <Navigation variant="blog" />
 
-      <main className="relative pt-32 pb-20 px-6">{children}</main>
+      <main className="relative px-6 pb-24 pt-36">{children}</main>
 
       <Footer />
     </div>

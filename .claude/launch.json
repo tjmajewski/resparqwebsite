@@ -2,10 +2,16 @@
   "version": "0.0.1",
   "configurations": [
     {
-      "name": "dev",
+      "name": "resparq-dev",
       "runtimeExecutable": "npm",
-      "runtimeArgs": ["run", "dev"],
-      "port": 3000
+      "runtimeArgs": ["run", "dev", "--", "--port", "3077"],
+      "port": 3077
+    },
+    {
+      "name": "resparq-prod",
+      "runtimeExecutable": "npx",
+      "runtimeArgs": ["next", "start", "--port", "3078"],
+      "port": 3078
     }
   ]
 }

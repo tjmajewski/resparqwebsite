@@ -82,7 +82,7 @@ export default async function BlogPostPage({ params }: Props) {
           {/* Back link */}
           <Link
             href="/blog"
-            className="inline-flex items-center gap-2 text-sm text-gray-400 hover:text-purple-400 transition-colors mb-8"
+            className="mb-8 inline-flex items-center gap-2 text-sm text-zinc-400 transition-colors hover:text-white"
           >
             <svg
               className="w-4 h-4"
@@ -102,19 +102,17 @@ export default async function BlogPostPage({ params }: Props) {
 
           {/* Header */}
           <header className="mb-12">
-            <div className="flex items-center gap-4 mb-6">
-              <span className="px-3 py-1 text-xs font-medium rounded-full bg-purple-500/10 border border-purple-500/20 text-purple-300">
+            <div className="mb-6 flex items-center gap-4">
+              <span className="rounded-full border border-brand-500/25 bg-brand-500/10 px-2.5 py-1 text-xs font-medium text-brand-300">
                 {post.category}
               </span>
-              <time dateTime={post.date} className="text-sm text-gray-500">
+              <time dateTime={post.date} className="text-sm text-zinc-500">
                 {formattedDate}
               </time>
-              <span className="text-sm text-gray-500">{post.readTime}</span>
+              <span className="text-sm text-zinc-500">{post.readTime}</span>
             </div>
-            <h1 className="text-4xl md:text-5xl font-bold leading-tight">
-              <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-                {post.title}
-              </span>
+            <h1 className="text-4xl font-semibold leading-[1.1] tracking-tight text-white md:text-5xl">
+              {post.title}
             </h1>
           </header>
 
@@ -122,27 +120,30 @@ export default async function BlogPostPage({ params }: Props) {
           <BlogContent content={post.content} />
 
           {/* CTA */}
-          <div className="mt-16 p-8 rounded-2xl bg-gradient-to-br from-purple-900/30 to-pink-900/30 border border-purple-500/30 text-center">
-            <h2 className="text-2xl md:text-3xl font-bold text-white mb-3">
-              Ready to Recover Lost Revenue?
-            </h2>
-            <p className="text-gray-400 mb-6 max-w-xl mx-auto">
-              Resparq&apos;s AI-powered exit intent automatically applies discount
-              codes at checkout, no email capture, no friction.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                href="/#pricing"
-                className="px-8 py-3 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full font-semibold hover:shadow-lg hover:shadow-purple-500/50 transition-all hover:scale-105"
-              >
-                See Pricing
-              </Link>
-              <Link
-                href="/#features"
-                className="px-8 py-3 rounded-full font-semibold border border-purple-500/30 hover:border-purple-500/60 transition-all"
-              >
-                Learn More
-              </Link>
+          <div className="relative mt-16 overflow-hidden rounded-2xl border border-white/10 bg-ink-900 p-8 text-center">
+            <div className="pointer-events-none absolute left-1/2 top-0 h-40 w-[420px] -translate-x-1/2 rounded-full bg-brand-600/20 blur-[100px]" />
+            <div className="relative">
+              <h2 className="mb-3 text-2xl font-semibold tracking-tight text-white md:text-3xl">
+                Ready to recover lost revenue?
+              </h2>
+              <p className="mx-auto mb-6 max-w-xl text-zinc-400">
+                Resparq&apos;s AI-powered exit intent automatically applies discount codes at checkout, with no email
+                capture and no friction.
+              </p>
+              <div className="flex flex-col justify-center gap-3 sm:flex-row">
+                <Link
+                  href="/#pricing"
+                  className="rounded-lg bg-brand-600 px-6 py-3 text-sm font-medium text-white transition-colors hover:bg-brand-500"
+                >
+                  See pricing
+                </Link>
+                <Link
+                  href="/#features"
+                  className="rounded-lg border border-white/15 px-6 py-3 text-sm font-medium text-white transition-colors hover:bg-white/5"
+                >
+                  Learn more
+                </Link>
+              </div>
             </div>
           </div>
         </article>
@@ -150,10 +151,10 @@ export default async function BlogPostPage({ params }: Props) {
         {/* Related posts */}
         {relatedPosts.length > 0 && (
           <aside className="mt-16">
-            <h2 className="text-2xl font-bold text-white mb-8">
-              Related Articles
+            <h2 className="mb-8 text-2xl font-semibold tracking-tight text-white">
+              Related articles
             </h2>
-            <div className="grid md:grid-cols-2 gap-6">
+            <div className="grid gap-5 md:grid-cols-2">
               {relatedPosts.map((relatedPost) => (
                 <BlogCard key={relatedPost.slug} post={relatedPost} />
               ))}

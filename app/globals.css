@@ -2,43 +2,71 @@
 @tailwind components;
 @tailwind utilities;
 
-@keyframes gradient {
-  0%, 100% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-ink-950 font-sans text-zinc-300 antialiased;
+    font-feature-settings: "cv11", "ss01";
+  }
+  ::selection {
+    background: rgba(139, 92, 246, 0.3);
+    color: #fff;
+  }
 }
 
-.animate-gradient {
-  animation: gradient 3s ease infinite;
+/* Faint dotted texture used behind the hero */
+.bg-dotgrid {
+  background-image: radial-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+  background-size: 22px 22px;
+}
+
+/* No-JS-safe hero entrance (runs once on load, content stays in the DOM) */
+@keyframes riseIn {
+  from { opacity: 0; transform: translateY(14px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.rise {
+  opacity: 0;
+  animation: riseIn 0.7s cubic-bezier(0.21, 0.47, 0.32, 0.98) forwards;
+}
+.rise-1 { animation-delay: 0.05s; }
+.rise-2 { animation-delay: 0.15s; }
+.rise-3 { animation-delay: 0.25s; }
+.rise-4 { animation-delay: 0.35s; }
+.rise-5 { animation-delay: 0.45s; }
+@media (prefers-reduced-motion: reduce) {
+  .rise { animation: none; opacity: 1; }
+  html { scroll-behavior: auto; }
 }
 
 /* Blog content typography */
 .blog-content a {
-  @apply text-purple-400 hover:text-purple-300 underline underline-offset-4 transition-colors;
+  @apply text-brand-400 hover:text-brand-500 underline underline-offset-4 transition-colors;
 }
-
 .blog-content strong {
   @apply text-white font-semibold;
 }
-
 .blog-content em {
-  @apply text-purple-300;
+  @apply text-brand-400 not-italic;
 }
 
 /* Legal page typography */
 .legal-content h2 {
-  @apply text-2xl font-bold text-white mt-10 mb-4;
+  @apply text-2xl font-semibold text-white mt-10 mb-4 tracking-tight;
 }
 .legal-content h3 {
   @apply text-lg font-semibold text-white mt-6 mb-2;
 }
 .legal-content p {
-  @apply text-gray-300 leading-relaxed mb-4;
+  @apply text-zinc-400 leading-relaxed mb-4;
 }
 .legal-content ul {
-  @apply list-disc pl-6 space-y-2 mb-4 text-gray-300 leading-relaxed marker:text-purple-400;
+  @apply list-disc pl-6 space-y-2 mb-4 text-zinc-400 leading-relaxed marker:text-brand-500;
 }
 .legal-content a {
-  @apply text-purple-400 hover:text-purple-300 underline underline-offset-4 transition-colors;
+  @apply text-brand-400 hover:text-brand-500 underline underline-offset-4 transition-colors;
 }
 .legal-content strong {
   @apply text-white font-semibold;
