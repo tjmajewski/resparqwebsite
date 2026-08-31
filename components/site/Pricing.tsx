@@ -16,9 +16,9 @@ const plans: Plan[] = [
   {
     name: 'Starter',
     blurb: 'For stores up to ~200 orders/month',
-    monthly: 29,
-    annualMonthly: '$24.65',
-    annualTotal: '$296/year',
+    monthly: 0,
+    annualMonthly: '$0',
+    annualTotal: '$0/year',
     features: [
       'Manual mode (you set what appears and when)',
       'Up to 1,000 impressions/month',
@@ -32,9 +32,9 @@ const plans: Plan[] = [
   {
     name: 'Pro',
     blurb: 'For stores with 200-2,000 orders/month',
-    monthly: 79,
-    annualMonthly: '$67.15',
-    annualTotal: '$806/year',
+    monthly: 50,
+    annualMonthly: '$42.50',
+    annualTotal: '$510/year',
     featured: true,
     features: [
       'Everything in Starter',
@@ -52,9 +52,9 @@ const plans: Plan[] = [
   {
     name: 'Enterprise',
     blurb: 'For stores with 2,000+ orders/month',
-    monthly: 199,
-    annualMonthly: '$169.15',
-    annualTotal: '$2,030/year',
+    monthly: 150,
+    annualMonthly: '$127.50',
+    annualTotal: '$1,530/year',
     features: [
       'Everything in Pro',
       'Unlimited impressions',
