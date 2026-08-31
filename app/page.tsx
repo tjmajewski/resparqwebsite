@@ -1,3 +1,4 @@
+import type { Metadata } from 'next';
 import Image from 'next/image';
 import SiteNav from '@/components/site/SiteNav';
 import Reveal from '@/components/site/Reveal';
@@ -111,6 +112,10 @@ const steps = [
   { title: 'Learning', description: 'The AI tracks what works and evolves your campaigns automatically (Pro and up).' },
 ];
 
+export const metadata: Metadata = {
+  alternates: { canonical: 'https://www.resparq.ai' },
+};
+
 const faqSchema = {
   '@context': 'https://schema.org',
   '@type': 'FAQPage',
@@ -119,6 +124,40 @@ const faqSchema = {
     name: faq.question,
     acceptedAnswer: { '@type': 'Answer', text: faq.answer },
   })),
+};
+
+const orgSchema = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'Organization',
+      '@id': 'https://www.resparq.ai/#org',
+      name: 'Resparq',
+      url: 'https://www.resparq.ai',
+      logo: 'https://www.resparq.ai/logo.svg',
+    },
+    {
+      '@type': 'WebSite',
+      '@id': 'https://www.resparq.ai/#website',
+      url: 'https://www.resparq.ai',
+      name: 'Resparq',
+      publisher: { '@id': 'https://www.resparq.ai/#org' },
+    },
+    {
+      '@type': 'SoftwareApplication',
+      name: 'Resparq',
+      applicationCategory: 'BusinessApplication',
+      operatingSystem: 'Web (Shopify)',
+      description:
+        'AI-powered exit-intent for Shopify that recovers abandoned carts by applying discount codes automatically at checkout.',
+      offers: {
+        '@type': 'Offer',
+        price: '0',
+        priceCurrency: 'USD',
+        description: 'Free Starter plan; paid plans from $50/mo.',
+      },
+    },
+  ],
 };
 
 function Eyebrow({ children }: { children: React.ReactNode }) {
@@ -133,6 +172,7 @@ function Eyebrow({ children }: { children: React.ReactNode }) {
 export default function Home() {
   return (
     <div className="min-h-screen bg-ink-950 text-zinc-300">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(orgSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
       <SiteNav />

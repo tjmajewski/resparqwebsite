@@ -1,5 +1,22 @@
+import type { Metadata } from 'next';
 import { getAllPosts } from '@/lib/blog-data';
 import BlogCard from '@/components/BlogCard';
+
+export const metadata: Metadata = {
+  title: 'Cart Recovery & Exit-Intent Insights',
+  description:
+    'Practical guides on recovering abandoned Shopify carts — exit-intent tactics, A/B testing, discount strategy, and conversion data.',
+  alternates: { canonical: 'https://www.resparq.ai/blog' },
+  openGraph: {
+    title: 'Resparq Blog — Cart Recovery & Exit-Intent Insights',
+    description:
+      'Practical guides on recovering abandoned Shopify carts — exit-intent tactics, A/B testing, and conversion data.',
+    url: 'https://www.resparq.ai/blog',
+    type: 'website',
+    images: ['/opengraph-image'],
+  },
+  twitter: { card: 'summary_large_image', images: ['/opengraph-image'] },
+};
 
 export default function BlogPage() {
   const posts = getAllPosts();

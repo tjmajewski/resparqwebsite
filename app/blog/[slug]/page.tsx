@@ -22,12 +22,20 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     title: post.metaTitle,
     description: post.metaDescription,
+    alternates: { canonical: `https://www.resparq.ai/blog/${post.slug}` },
     openGraph: {
       title: post.metaTitle,
       description: post.metaDescription,
       type: 'article',
       publishedTime: post.date,
       url: `https://www.resparq.ai/blog/${post.slug}`,
+      images: [`/blog/${post.slug}/opengraph-image`],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: post.metaTitle,
+      description: post.metaDescription,
+      images: [`/blog/${post.slug}/opengraph-image`],
     },
   };
 }

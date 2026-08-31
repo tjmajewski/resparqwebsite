@@ -26,6 +26,12 @@ export const metadata: Metadata = {
     siteName: "Resparq",
     url: "https://www.resparq.ai",
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "Resparq - AI-Powered Exit Intent for Shopify",
+    description:
+      "Recover abandoned carts automatically with AI-powered exit intent that applies discount codes at checkout.",
+  },
 };
 
 export default function RootLayout({

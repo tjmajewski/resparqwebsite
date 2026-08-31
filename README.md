@@ -159,14 +159,14 @@ vercel --prod
 
 ## Pricing Structure
 
-### Starter - $19/month
+### Starter - Free
 - Manual mode
 - 1,000 impressions/month
 - 1 campaign
 - Basic analytics
 - Email support
 
-### Pro - $79/month ⭐ MOST POPULAR
+### Pro - $50/month ⭐ MOST POPULAR
 - Everything in Starter
 - AI autopilot (17 signals)
 - 10,000 impressions/month
@@ -174,7 +174,7 @@ vercel --prod
 - A/B testing
 - Advanced analytics
 
-### Enterprise - $249/month
+### Enterprise - $150/month
 - Everything in Pro
 - Unlimited impressions
 - Smarter AI (17 signals)
