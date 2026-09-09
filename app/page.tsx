@@ -18,6 +18,11 @@ const faqItems: FaqItem[] = [
       "Our AI analyzes 17 customer signals in real-time including cart value, visit history, device type, traffic source, time on site, and browsing behavior. Based on this analysis, it determines the optimal intervention for each shopper, whether that's a discount offer, product benefit reminder, urgency message, or simply letting them go. The goal is to show the right message to the right customer, not just blast everyone with discounts.",
   },
   {
+    question: "What's the difference between Guided and full AI mode?",
+    answer:
+      'Guided mode (Pro and up) lets you pin one offer for every shopper. You set the discount; the AI decides who sees a modal, when it appears, and how it is worded, but it never changes the number you set. Full AI mode, also called Autopilot, hands the offer to the AI too, so it optimizes the discount itself within your limits. Manual mode keeps you in full control of what appears and when. Many stores start with Guided to keep margins predictable, then switch to Autopilot once they trust the results.',
+  },
+  {
     question: 'Will exit intent pop-ups annoy my customers?',
     answer:
       'Resparq is designed to be helpful, not annoying. Modals only appear when the AI detects a shopper is likely to abandon, not on every page visit. The AI also learns over time which interventions work best, reducing unnecessary disruptions. Plus, you have full control over frequency limits and can customize when modals appear.',
@@ -64,9 +69,9 @@ const features = [
     ),
   },
   {
-    title: 'Full control',
+    title: 'Three modes of control',
     description:
-      'Override AI decisions any time. Set offer ranges, write custom messages, and choose when modals appear. The AI optimizes within your rules.',
+      'Run it your way. Manual: you set everything. Guided: you set the offer, AI decides who sees it, when, and how. Autopilot: AI optimizes everything, including the offer.',
     icon: (
       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.6} d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4" />
     ),
@@ -369,6 +374,9 @@ export default function Home() {
             </h2>
             <p className="mt-4 max-w-xl text-zinc-400">
               Predictable plans, no commissions, no hidden fees. Every plan includes a 14-day free trial.
+            </p>
+            <p className="mt-3 max-w-xl text-sm text-zinc-500">
+              Manual → Guided → Autopilot: pick how much you hand to the AI. Guided and Autopilot are on Pro and up.
             </p>
           </Reveal>
 

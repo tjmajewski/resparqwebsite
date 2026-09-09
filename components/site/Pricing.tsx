@@ -38,7 +38,8 @@ const plans: Plan[] = [
     featured: true,
     features: [
       'Everything in Starter',
-      'AI mode',
+      'Guided mode (you set the offer, AI does the rest)',
+      'Full AI mode (AI optimizes everything, including the offer)',
       'Up to 10,000 impressions/month',
       'Evolution system (auto-improves variants)',
       'Automated A/B testing',
