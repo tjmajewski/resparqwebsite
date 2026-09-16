@@ -614,7 +614,7 @@ const posts: BlogPost[] = [
         '<strong>Freemium:</strong> Free tier with limited features or impressions. Good for testing, but the limitations often make it hard to evaluate true performance.'
       ] },
       { type: 'paragraph', text: 'When comparing costs, always calculate the <strong>net ROI</strong>: revenue recovered minus tool cost minus discount cost. A more expensive tool with better AI might generate higher net returns than a cheaper tool with basic features.' },
-      { type: 'callout', text: 'Resparq offers flat-rate pricing starting at $29/month with no commissions on recovered sales. Our AI Decision Engine analyzes up to 17 customer signals to maximize your recovery rate while minimizing discounts. <a href="/#pricing">Compare our plans</a>.' },
+      { type: 'callout', text: 'Resparq offers flat-rate pricing with a free Starter plan and paid plans from $50/month, with no commissions on recovered sales. Our AI Decision Engine analyzes up to 17 customer signals to maximize your recovery rate while minimizing discounts. <a href="/#pricing">Compare our plans</a>.' },
     ],
   },
   {
