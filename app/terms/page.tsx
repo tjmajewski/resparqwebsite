@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 
 export default function TermsPage() {
   return (
-    <LegalLayout title="Terms of Service" updated="February 2026">
+    <LegalLayout title="Terms of Service" updated="September 2026">
       <h2>Agreement to Terms</h2>
       <p>
         These Terms of Service (&quot;Terms&quot;) govern your access to and use of the Resparq Shopify
@@ -22,6 +22,22 @@ export default function TermsPage() {
         Resparq provides an AI-powered exit-intent modal that displays targeted discount offers to
         your store visitors to help recover abandoning carts. Features, pricing, and availability
         may change over time.
+      </p>
+
+      <h3>Measurement holdout</h3>
+      <p>
+        On plans where Resparq decides offers for you, a randomly selected share of your eligible
+        visitors — <strong>currently 10%</strong> — is deliberately shown nothing. This control
+        group is what lets your dashboard report the difference Resparq actually makes to your
+        conversion rate, rather than crediting itself with sales that would have happened anyway.
+      </p>
+      <p>
+        Being honest about the cost: those visitors receive no offer from us, and some share of
+        them would have converted if they had. We consider this a necessary part of a product
+        that reports a revenue figure you are expected to trust. We may adjust the size of the
+        holdout over time; if we increase it materially we will tell you in advance, and the
+        current figure is always the one stated here. Manual mode randomises nothing and has no
+        holdout.
       </p>
 
       <h2>Merchant Responsibilities</h2>
